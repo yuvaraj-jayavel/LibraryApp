@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.debug_dump {
+  @apply float-left clear-both w-full mt-10 text-red-500 box-border;
+}
