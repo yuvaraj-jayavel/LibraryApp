@@ -1,0 +1,30 @@
+<h1>Books</h1>
+
+<div>
+  <div>+ New Book</div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>S.No.</th>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Publisher</th>
+      <th>Year</th>
+      <th>Categories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.id %></td>
+        <td><%= book.name %></td>
+        <td><%= book.author.name %></td>
+        <td><%= book.publisher.name %></td>
+        <td><%= book.publishing_year %></td>
+        <td><%= book.categories.map { |c| c.name }.join(', ') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
