@@ -1,29 +1,29 @@
-<h1>Books</h1>
+<p class="text-5xl mb-4">Books</p>
 
-<div>
-  <div>+ New Book</div>
+<div class="flex justify-end mb-2">
+  <button class="bg-blue-500 rounded-md py-2 px-4 text-lg text-white">+ New Book</button>
 </div>
 
-<table>
+<table class="w-full table-auto rounded-md box-border">
   <thead>
-    <tr>
-      <th>S.No.</th>
-      <th>Name</th>
-      <th>Author</th>
-      <th>Publisher</th>
-      <th>Year</th>
-      <th>Categories</th>
+    <tr class="bg-gray-100">
+      <th class="p-4">S.No.</th>
+      <th class="p-4">Name</th>
+      <th class="p-4">Author</th>
+      <th class="p-4">Publisher</th>
+      <th class="p-4">Year</th>
+      <th class="p-4">Categories</th>
     </tr>
   </thead>
   <tbody>
     <% @books.each do |book| %>
       <tr>
-        <td><%= book.id %></td>
-        <td><%= book.name %></td>
-        <td><%= book.author.name %></td>
-        <td><%= book.publisher.name %></td>
-        <td><%= book.publishing_year %></td>
-        <td><%= book.categories.map { |c| c.name }.join(', ') %></td>
+        <td class="text-center p-2"><%= book.id %></td>
+        <td class="text-center p-2"><%= book.name %></td>
+        <td class="text-center p-2"><%= book.author.name %></td>
+        <td class="text-center p-2"><%= book.publisher.name %></td>
+        <td class="text-center p-2"><%= book.publishing_year %></td>
+        <td class="text-center p-2"><%= book.categories.map { |c| c.name }.join(', ') %></td>
       </tr>
     <% end %>
   </tbody>

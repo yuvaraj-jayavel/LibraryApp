@@ -12,7 +12,9 @@
   </head>
 
   <body>
-    <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
+    <main class="p-12">
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+    </main>
   </body>
 </html>
