@@ -4,8 +4,9 @@
   <button class="bg-blue-500 rounded-md py-2 px-4 text-lg text-white">+ New Book</button>
 </div>
 
-<table class="w-full table-auto rounded-md box-border">
-  <thead>
+<div class="overflow-x-auto">
+  <table class="w-full table-auto rounded-md box-border">
+    <thead>
     <tr class="bg-gray-100">
       <th class="p-4">S.No.</th>
       <th class="p-4">Name</th>
@@ -14,8 +15,8 @@
       <th class="p-4">Year</th>
       <th class="p-4">Categories</th>
     </tr>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
     <% @books.each do |book| %>
       <tr>
         <td class="text-center p-2"><%= book.id %></td>
@@ -26,5 +27,6 @@
         <td class="text-center p-2"><%= book.categories.map { |c| c.name }.join(', ') %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
