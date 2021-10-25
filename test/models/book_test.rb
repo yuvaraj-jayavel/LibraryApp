@@ -4,10 +4,10 @@ require 'test_helper'
 
 class BookTest < ActiveSupport::TestCase
   def setup
-    @author = Author.new(name: 'Chetan Bhagat')
-    @category1 = Category.new(name: 'Romance')
-    @category2 = Category.new(name: 'Young Adult')
-    @publisher = Publisher.new(name: 'Kalki')
+    @author = Author.create(name: 'Chetan Bhagat')
+    @category1 = Category.create(name: 'Romance')
+    @category2 = Category.create(name: 'Young Adult')
+    @publisher = Publisher.create(name: 'Kalki')
   end
 
   test 'should be valid' do

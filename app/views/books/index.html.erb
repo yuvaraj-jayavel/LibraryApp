@@ -22,7 +22,7 @@
         <td class="text-center p-2"><%= book.id %></td>
         <td class="text-center p-2"><%= book.name %></td>
         <td class="text-center p-2"><%= book.author.name %></td>
-        <td class="text-center p-2"><%= book.publisher.name %></td>
+        <td class="text-center p-2"><%= book.publisher&.name %></td>
         <td class="text-center p-2"><%= book.publishing_year %></td>
         <td class="text-center p-2"><%= book.categories.map { |c| c.name }.join(', ') %></td>
       </tr>

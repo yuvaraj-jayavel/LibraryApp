@@ -77,6 +77,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rack-proxy (v0.7.0, RVM: ruby-3.0.2 [LibraryApp]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v1.1.0, RVM: ruby-3.0.2 [LibraryApp]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v6.1.4.1, RVM: ruby-3.0.2 [LibraryApp]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-controller-testing (v1.0.5, RVM: ruby-3.0.2 [LibraryApp]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.3, RVM: ruby-3.0.2 [LibraryApp]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.4.2, RVM: ruby-3.0.2 [LibraryApp]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v6.1.4.1, RVM: ruby-3.0.2 [LibraryApp]) [gem]" level="application" />

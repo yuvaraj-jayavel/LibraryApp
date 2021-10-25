@@ -5,3 +5,8 @@
 .debug_dump {
   @apply float-left clear-both w-full mt-10 text-red-500 box-border;
 }
+
+.required-field-label:after {
+  content: ' *';
+  @apply text-red-500;
+}
