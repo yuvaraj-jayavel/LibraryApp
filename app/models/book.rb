@@ -21,7 +21,7 @@ class Book < ApplicationRecord
       author = Author.find_or_create_by(name: hash[:author_name])
       publisher = Publisher.find_or_create_by(name: hash[:publisher_name])
       categories = hash[:categories]&.split(',')&.map do |category_name|
-        Category.find_or_create_by(name: category_name)
+        Category.find_or_create_by(name: category_name.strip)
       end || []
       @new_book = Book.create(name: hash[:name], author: author, publisher: publisher,
                           publishing_year: hash[:publishing_year], categories: categories)
