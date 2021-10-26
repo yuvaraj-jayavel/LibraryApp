@@ -10,12 +10,6 @@ class Book < ApplicationRecord
   validates :publishing_year, numericality: { allow_nil: true, less_than_or_equal_to: Time.now.year }
   validates :author_id, presence: true
 
-  # before_validation :strip_and_squish_whitespaces
-  #
-  # def strip_and_squish_whitespaces
-  #   self.name = name.strip.gsub(/\s+/, ' ') if name.respond_to?('strip')
-  # end
-
   def self.create_with_associated_models(hash = {})
     Book.transaction do
       author = Author.find_or_create_by(name: hash[:author_name])
@@ -24,7 +18,7 @@ class Book < ApplicationRecord
         Category.find_or_create_by(name: category_name.strip)
       end || []
       @new_book = Book.create(name: hash[:name], author: author, publisher: publisher,
-                          publishing_year: hash[:publishing_year], categories: categories)
+                              publishing_year: hash[:publishing_year], categories: categories)
       raise ActiveRecord::Rollback if @new_book.invalid?
 
     end
