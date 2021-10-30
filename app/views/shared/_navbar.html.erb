@@ -1,0 +1,15 @@
+<div class="w-full px-4 md:px-12 py-4 md:pt-12">
+  <div class="flex justify-between">
+    <a href="#" class="font-black text-3xl">Muthamizh Mandram</a>
+    <nav>
+      <%= link_to "Books", books_index_path, class: "px-4 py-2 mt-2 text-md font-semibold" %>
+      <%= link_to "Create Book", books_new_path, class: "px-4 py-2 mt-2 text-md font-semibold" %>
+      <% if logged_in? %>
+        <%= link_to "Log Out", logout_path, method: :delete, class: "px-4 py-2 mt-2 text-md font-semibold" %>
+        <span class="font-semibold text-blue-500"><%= current_staff.username %></span>
+      <% else %>
+        <%= link_to "Log In", login_path, class: "px-4 py-2 mt-2 text-md font-semibold" %>
+      <% end %>
+    </nav>
+  </div>
+</div>
