@@ -2,8 +2,8 @@ require "test_helper"
 
 class StaffTest < ActiveSupport::TestCase
   def setup
-    @admin_role = Role.create(name: 'ADMIN')
-    @librarian_role = Role.create(name: 'LIBRARIAN')
+    @admin_role = roles(:admin)
+    @librarian_role = roles(:librarian)
   end
 
   test 'should be valid' do

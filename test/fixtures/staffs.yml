@@ -1,11 +1,10 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+admino:
+  username: 'admino'
+  password_digest: <%= Staff.digest('password') %>
+  role: admin
 
-one:
-  username: MyString
-  password_digest: MyString
-  role: one
-
-two:
-  username: MyString
-  password_digest: MyString
-  role: two
+libster:
+  username: 'libster'
+  password_digest: <%= Staff.digest('password') %>
+  role: librarian

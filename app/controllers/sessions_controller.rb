@@ -4,10 +4,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    staff = Staff.find_by(username: login_params[:username].downcase)
+    staff = Staff.find_by(username: login_params[:username])
     if staff&.authenticate(login_params[:password])
       log_in staff
-      redirect_to books_index_path
+      remember staff
+      redirect_to root_path
     else
       flash.now[:danger] = 'Invalid username or password!'
       render 'new'
