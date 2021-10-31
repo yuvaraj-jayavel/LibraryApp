@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.create_with_associated_models(book_params)
     if @book.valid?
-      redirect_to books_index_path
+      redirect_to books_path
     else
       render 'new'
     end
