@@ -22,11 +22,18 @@ module SessionsHelper
     cookies.permanent[:remember_token] = staff.remember_token
   end
 
+  def forget(staff)
+    staff.forget
+    cookies.delete(:staff_id)
+    cookies.delete(:remember_token)
+  end
+
   def logged_in?
     !current_staff.nil?
   end
 
   def log_out
+    forget(current_staff)
     session.delete(:staff_id)
     @current_staff = nil
   end

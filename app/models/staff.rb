@@ -1,6 +1,6 @@
 class Staff < ApplicationRecord
   attr_accessor :remember_token
-  
+
   belongs_to :role
 
   has_secure_password
@@ -17,6 +17,10 @@ class Staff < ApplicationRecord
   def remember
     self.remember_token = Staff.new_token
     update_attribute(:remember_digest, Staff.digest(remember_token))
+  end
+
+  def forget
+    update_attribute(:remember_digest, nil)
   end
 
   def admin?
