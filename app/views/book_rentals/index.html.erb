@@ -11,8 +11,8 @@
       <th class="p-4">Issue ID</th>
       <th class="p-4">Book</th>
       <th class="p-4">Member</th>
-      <th class="p-4">Issued At</th>
-      <th class="p-4">Returned At</th>
+      <th class="p-4">Issued On</th>
+      <th class="p-4">Returned On</th>
     </tr>
     </thead>
     <tbody>
@@ -21,8 +21,8 @@
         <td class="text-center p-2"><%= book_rental.id %></td>
         <td class="text-center p-2"><%= book_rental.borrowed_book %></td>
         <td class="text-center p-2"><%= book_rental.borrower %></td>
-        <td class="text-center p-2"><%= book_rental.issued_at %></td>
-        <td class="text-center p-2"><%= book_rental.returned_at %></td>
+        <td class="text-center p-2"><%= book_rental.issued_on %></td>
+        <td class="text-center p-2"><%= book_rental.returned_on %></td>
       </tr>
     <% end %>
     </tbody>

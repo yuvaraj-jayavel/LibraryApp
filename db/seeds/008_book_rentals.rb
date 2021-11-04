@@ -6,12 +6,12 @@ member2 = Member.second
 BookRental.create(
   book: book1,
   member: member1,
-  issued_at: Time.now
+  issued_on: Date.today
 )
 
 BookRental.create(
   book: book2,
   member: member2,
-  issued_at: 10.days.ago,
-  returned_at: 2.days.ago
+  issued_on: 10.days.ago,
+  returned_on: 2.days.ago
 )

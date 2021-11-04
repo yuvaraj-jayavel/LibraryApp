@@ -23,6 +23,6 @@ class BookRentalsController < ApplicationController
       .require(:book_rental)
       .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
       .reject { |_k, v| v.blank? }
-      .permit(:book_id, :member_id, :issued_at)
+      .permit(:book_id, :member_id, :issued_on)
   end
 end
