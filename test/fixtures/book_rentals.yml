@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  book: one
+  member: one
+  issued_at: 2021-11-04 14:18:45
+  returned_at: 2021-11-04 14:18:45
+
+two:
+  book: two
+  member: two
+  issued_at: 2021-11-04 14:18:45
+  returned_at: 2021-11-04 14:18:45

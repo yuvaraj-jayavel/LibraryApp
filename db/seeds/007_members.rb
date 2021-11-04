@@ -1,10 +1,21 @@
 Member.create(
   id: 1,
-  name: 'Yuvaraj',
-  father_name: 'Jayavel',
+  name: 'Vir',
+  father_name: 'Das',
   personal_number: 7956,
   date_of_birth: '2000-04-23',
   date_of_retirement: '2060-04-30',
-  email: 'yuvaraj@example.com',
+  email: 'vir@example.com',
+  phone: '9999999999'
+)
+
+Member.create(
+  id: 2,
+  name: 'Donald',
+  father_name: 'Glover',
+  personal_number: 1234,
+  date_of_birth: '1987-04-23',
+  date_of_retirement: '2040-04-30',
+  email: 'donald@example.com',
   phone: '9999988888'
 )

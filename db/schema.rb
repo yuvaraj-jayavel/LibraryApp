@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_03_175400) do
+ActiveRecord::Schema.define(version: 2021_11_04_084844) do
 
   create_table "authors", force: :cascade do |t|
     t.text "name"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 2021_11_03_175400) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_id"], name: "index_book_categories_on_book_id"
     t.index ["category_id"], name: "index_book_categories_on_category_id"
+  end
+
+  create_table "book_rentals", force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.integer "member_id", null: false
+    t.datetime "issued_at"
+    t.datetime "returned_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_book_rentals_on_book_id"
+    t.index ["member_id"], name: "index_book_rentals_on_member_id"
   end
 
   create_table "books", force: :cascade do |t|
@@ -83,6 +94,8 @@ ActiveRecord::Schema.define(version: 2021_11_03_175400) do
 
   add_foreign_key "book_categories", "books"
   add_foreign_key "book_categories", "categories"
+  add_foreign_key "book_rentals", "books"
+  add_foreign_key "book_rentals", "members"
   add_foreign_key "books", "authors"
   add_foreign_key "books", "publishers"
   add_foreign_key "staffs", "roles"
