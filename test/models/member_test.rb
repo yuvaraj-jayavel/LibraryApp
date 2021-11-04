@@ -1,0 +1,86 @@
+require "test_helper"
+
+class MemberTest < ActiveSupport::TestCase
+  def setup
+    @member = members(:johnny)
+  end
+
+  test 'should be valid' do
+    @member.valid?
+  end
+
+  test 'member should have name' do
+    @member.name = nil
+    assert @member.invalid?
+  end
+
+  test 'member should have personal number' do
+    @member.personal_number = nil
+    assert @member.invalid?
+  end
+
+  test 'personal number should be a positive integer' do
+    @member.personal_number = 'abcd'
+    assert @member.invalid?
+
+    @member.personal_number = '-1234'
+    assert @member.invalid?
+  end
+
+  test 'personal number should be unique' do
+    another_member = members(:phineas)
+    assert another_member.valid?
+    another_member.personal_number = @member.personal_number
+    assert another_member.invalid?
+    assert another_member.errors.include? :personal_number
+  end
+
+  test 'email can be blank' do
+    @member.email = nil
+    @member.save
+    assert @member.valid?
+  end
+
+  test 'multiple nil emails can be present' do
+    @member.email = nil
+    @member.save
+
+    another_member = members(:phineas)
+    another_member.email = nil
+    another_member.save
+
+    assert @member.valid?
+    assert another_member.valid?
+  end
+
+  test 'phone number can be blank' do
+    @member.phone = nil
+    assert @member.valid?
+
+    @member.phone = ''
+    assert @member.valid?
+  end
+
+  test 'phone number should be 10 digits' do
+    @member.phone = '123456789'
+    assert @member.invalid?
+
+    @member.phone = '12345678901'
+    assert @member.invalid?
+
+    @member.phone = '1234567890'
+    assert @member.valid?
+  end
+
+  test 'multiple nil phones can be present' do
+    @member.phone = nil
+    @member.save!
+
+    another_member = members(:phineas)
+    another_member.phone = nil
+    another_member.save!
+
+    assert @member.valid?
+    assert another_member.valid?
+  end
+end
