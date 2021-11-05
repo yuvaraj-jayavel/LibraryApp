@@ -1,0 +1,2 @@
+module MemberBookRentalsHelper
+end

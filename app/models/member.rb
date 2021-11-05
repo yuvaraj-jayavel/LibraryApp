@@ -1,4 +1,6 @@
 class Member < ApplicationRecord
+  has_many :book_rentals
+
   validates :name, presence: true
   validates :personal_number, presence: true, uniqueness: true, numericality: { greater_than: 0 }
 

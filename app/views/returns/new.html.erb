@@ -1,0 +1,30 @@
+<div class="w-full flex justify-center"
+     data-controller="returns-form"
+     data-returns-form-url-value="<%= member_book_rentals_path %>"
+>
+  <%= form_with(url: returns_path, scope: :return, local: true, class: "flex flex-col w-full bg-white shadow-md border rounded-md p-12") do |f| %>
+    <p class="text-4xl font-black mb-4">Return</p>
+    <div class="flex flex-col mb-6">
+      <%= f.label :member_id, 'Member', class: "block mb-2 font-medium required-field-label" %>
+      <%= f.collection_select :member_id, Member.all, :id, :name, {}, {
+        required: true,
+        class: "shadow border px-4 py-2 w-full rounded",
+        data: { action: "returns-form#handleMemberIdChange" }
+      } %>
+    </div>
+    <div class="mb-6">
+      <label for="books-list-container" class="block mb-2 font-medium required-field-label">Books</label>
+      <div
+        id="books-list-container"
+        class="flex align-items-stretch min-h-24 w-full px-4 py-2 rounded-md border shadow-md"
+        data-returns-form-target="booksList"
+      >
+      </div>
+    </div>
+    <div class="flex flex-col mb-6">
+      <%= f.label :returned_on, class: "block mb-2 font-medium" %>
+      <%= f.date_field :returned_on, value: Date.today, required: true, class: "shadow border px-4 py-2 w-full rounded" %>
+    </div>
+    <%= f.submit "Create", class: "bg-blue-500 rounded-md py-2 px-4 text-lg text-white font-extrabold" %>
+  <% end %>
+</div>
