@@ -25,4 +25,8 @@ class Book < ApplicationRecord
     end
     @new_book
   end
+
+  def available?
+    !BookRental.exists?(book_id: id, returned_on: nil)
+  end
 end

@@ -28,64 +28,59 @@ class BookTest < ActiveSupport::TestCase
   end
 
   test 'should not have blank name' do
-    book = Book.new(
-      name: '',
-      publishing_year: 2019,
-      author: @author,
-      categories: [@category1, @category2],
-      publisher: @publisher
-    )
-    assert_not book.valid?
-  end
-
-  test 'publishing year can be blank' do
-    book = Book.new(
-      name: 'New Book',
-      author: @author,
-      categories: [@category1, @category2],
-      publisher: @publisher
-    )
+    book = books(:oliver_twist)
     assert book.valid?
-  end
 
-  test 'publishing year should be before current year' do
-    book = Book.new(
-      name: 'New Book',
-      publishing_year: Time.now.year.succ,
-      author: @author,
-      categories: [@category1, @category2],
-      publisher: @publisher
-    )
+    book.name = ''
     assert book.invalid?
   end
 
+  test 'publishing year can be blank' do
+    book = books(:oliver_twist)
+    assert book.valid?
+
+    book.publishing_year = nil
+    assert book.valid?
+
+    book.publishing_year = ''
+    assert book.valid?
+  end
+
+  test 'publishing year should be less than or equal to current year' do
+    book = books(:oliver_twist)
+    assert book.valid?
+
+    book.publishing_year = Date.today.year.succ
+    assert book.invalid?
+
+    book.publishing_year = Date.today.year
+    assert book.valid?
+
+    book.publishing_year = Date.today.year.pred
+    assert book.valid?
+  end
+
   test 'should not be without an author' do
-    book = Book.new(
-      name: 'New Book',
-      publishing_year: 2019,
-      categories: [@category1, @category2],
-      publisher: @publisher
-    )
+    book = books(:oliver_twist)
+    assert book.valid?
+
+    book.author = nil
     assert book.invalid?
   end
 
   test 'can have zero categories' do
-    book = Book.new(
-      name: 'New book',
-      publishing_year: 2019,
-      author: @author,
-      publisher: @publisher
-    )
+    book = books(:oliver_twist)
+    assert book.valid?
+
+    book.categories = []
     assert book.valid?
   end
 
   test 'can be without a publisher' do
-    book = Book.new(
-      name: 'New Book',
-      publishing_year: 2019,
-      author: @author,
-      categories: [@category1, @category2]
-    )
+    book = books(:oliver_twist)
+    assert book.valid?
+
+    book.publisher = nil
     assert book.valid?
   end
 
@@ -182,5 +177,18 @@ class BookTest < ActiveSupport::TestCase
       # name is blank and hence book create is invalid
       assert book.invalid?
     end
+  end
+
+  test 'book should be available if there is no active book rental' do
+    returned_book_rental = book_rentals(:returned)
+    assert returned_book_rental.book.available?
+
+    unborrowed_book = books(:bleak_house)
+    assert unborrowed_book.available?
+  end
+
+  test 'book should be unavailable if there is an active book rental' do
+    unreturned_book_rental = book_rentals(:unreturned)
+    assert_not unreturned_book_rental.book.available?
   end
 end

@@ -1,7 +1,10 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyText
+romance:
+  name: Romance
 
-two:
-  name: MyText
+young_adult:
+  name: Young Adult
+
+historical:
+  name: Historical

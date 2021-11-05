@@ -1,13 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyText
-  publishing_year: 1
-  author: one
-  publisher: one
+five_point_someone:
+  name: Five Point Someone
+  publishing_year: 2004
+  author: bhagat
+  publisher: rupa
 
-two:
-  name: MyText
-  publishing_year: 1
-  author: two
-  publisher: two
+oliver_twist:
+  name: Oliver Twist
+  publishing_year: 1838
+  author: dickens
+  publisher: bentley
+
+bleak_house:
+  name: Bleak House
+  author: dickens

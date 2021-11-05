@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  book: one
-  category: one
+five_point_someone_romance:
+  book: five_point_someone
+  category: romance
 
-two:
-  book: two
-  category: two
+five_point_someone_young_adult:
+  book: five_point_someone
+  category: young_adult
+
+oliver_twist_historical:
+  book: oliver_twist
+  category: historical
