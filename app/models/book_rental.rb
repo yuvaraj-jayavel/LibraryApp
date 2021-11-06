@@ -4,6 +4,8 @@ class BookRental < ApplicationRecord
 
   validate :book_is_available, on: :create
 
+  scope :current, -> { where(returned_on: nil) }
+
   def borrower
     "#{member.name} ##{member.id}"
   end
