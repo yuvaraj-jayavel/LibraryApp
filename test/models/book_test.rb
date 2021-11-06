@@ -179,16 +179,68 @@ class BookTest < ActiveSupport::TestCase
     end
   end
 
-  test 'book should be available if there is no active book rental' do
-    returned_book_rental = book_rentals(:returned)
-    assert returned_book_rental.book.available?
+  test 'newly created (unborrowed book) should be available' do
+    unborrowed_book = Book.create(
+      name: 'New Book',
+      publishing_year: 2019,
+      author: @author,
+      categories: [@category1, @category2],
+      publisher: @publisher
+    )
+    assert unborrowed_book.valid?
 
-    unborrowed_book = books(:bleak_house)
     assert unborrowed_book.available?
   end
 
+  test 'book should be available if it is returned and no active book rental is present' do
+    returned_book = book_rentals(:returned).book
+    assert returned_book.valid?
+    assert returned_book.available?
+  end
+
   test 'book should be unavailable if there is an active book rental' do
-    unreturned_book_rental = book_rentals(:unreturned)
-    assert_not unreturned_book_rental.book.available?
+    unreturned_book = book_rentals(:unreturned).book
+    assert unreturned_book.valid?
+    assert_not unreturned_book.available?
+  end
+
+  test 'returned and then borrowed again book should be unavailable' do
+    returned_and_borrowed_again_book = book_rentals(:returned_and_borrowed_again).book
+    assert returned_and_borrowed_again_book.valid?
+    assert_not returned_and_borrowed_again_book.available?
+  end
+
+  test 'newly created book should be in the list of available books' do
+    book = Book.create(
+      name: 'New Book',
+      publishing_year: 2019,
+      author: @author,
+      categories: [@category1, @category2],
+      publisher: @publisher
+    )
+    assert book.valid?
+
+    assert_includes Book.available, book
+  end
+
+  test 'returned book should be in the list of available books' do
+    returned_book = book_rentals(:returned).book
+    assert returned_book.valid?
+
+    assert_includes Book.available, returned_book
+  end
+
+  test 'unreturned book should not be in the list of available books' do
+    unreturned_book = book_rentals(:unreturned).book
+    assert unreturned_book.valid?
+
+    assert_not_includes Book.available, unreturned_book
+  end
+
+  test 'returned then borrowed again book should not be in the list of available books' do
+    returned_and_borrowed_again_book = book_rentals(:returned_and_borrowed_again).book
+    assert returned_and_borrowed_again_book.valid?
+
+    assert_not_includes Book.available, returned_and_borrowed_again_book
   end
 end

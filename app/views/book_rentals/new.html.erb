@@ -3,7 +3,7 @@
     <p class="text-4xl font-black mb-4">Create Book Rental</p>
     <div class="flex flex-col mb-6">
       <%= f.label :book_id, 'Book', class: "block mb-2 font-medium required-field-label" %>
-      <%= f.collection_select :book_id, Book.all, :id, :name, {}, {required: true, class: "shadow border px-4 py-2 w-full rounded"} %>
+      <%= f.collection_select :book_id, Book.available, :id, :name, {}, { required: true, class: "shadow border px-4 py-2 w-full rounded"} %>
     </div>
     <div class="flex flex-col mb-6">
       <%= f.label :member_id, 'Member', class: "block mb-2 font-medium required-field-label" %>

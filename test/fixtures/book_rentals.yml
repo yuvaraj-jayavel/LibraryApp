@@ -11,3 +11,15 @@ unreturned:
   member: johnny
   issued_on: <%= 10.days.ago %>
   returned_on: nil
+
+returned_will_borrow_again:
+  book: bleak_house
+  member: johnny
+  issued_on: <%= 10.days.ago %>
+  returned_on: <%= 2.days.ago %>
+
+returned_and_borrowed_again:
+  book: bleak_house
+  member: johnny
+  issued_on: <% 1.day.ago %>
+  returned_on: nil

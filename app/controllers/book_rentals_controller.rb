@@ -12,6 +12,7 @@ class BookRentalsController < ApplicationController
     if @book_rental.valid?
       redirect_to book_rentals_path
     else
+      flash.now[:danger] = @book_rental.errors.full_messages
       render 'new'
     end
   end

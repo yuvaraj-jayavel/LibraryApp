@@ -26,6 +26,10 @@ class Book < ApplicationRecord
     @new_book
   end
 
+  def self.available
+    where.not(id: joins(:book_rentals).where(book_rentals: { returned_on: nil }))
+  end
+
   def available?
     !BookRental.exists?(book_id: id, returned_on: nil)
   end
