@@ -3,9 +3,12 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-  def new; end
+  def new
+    authorize Book
+  end
 
   def create
+    authorize Book
     @book = Book.create_with_associated_models(book_params)
     if @book.valid?
       redirect_to books_path

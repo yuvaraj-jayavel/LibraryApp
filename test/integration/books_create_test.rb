@@ -9,6 +9,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
     @category2 = Category.create(name: 'Comedy')
     @book = Book.create(name: 'Born A Crime', author: @author, publisher: @publisher, publishing_year: 2009,
                         categories: [@category1, @category2])
+    log_in_as(staffs(:admino))
   end
 
   test 'can create with all the parameters' do
@@ -326,6 +327,22 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
         follow_redirect!
         assert_response :success
       end
+    end
+  end
+
+  test 'cannot create book when logged out' do
+    delete logout_path
+    assert_raise Pundit::NotAuthorizedError do
+      post books_path,
+           params: {
+             book: {
+               name: 'Da Vinci Code',
+               author_name: 'Dan Brown',
+               publisher_name: 'Penguin Labs',
+               publishing_year: '2010',
+               categories: 'Mystery, Crime'
+             }
+           }
     end
   end
 end

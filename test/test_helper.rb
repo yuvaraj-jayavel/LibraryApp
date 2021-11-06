@@ -17,7 +17,7 @@ module ActiveSupport
     end
 
     def log_in_as(staff)
-      session[:staff_id] = staff.id
+      post login_path, params: { session: { username: staff.username, password: 'password' } }
     end
   end
 end
