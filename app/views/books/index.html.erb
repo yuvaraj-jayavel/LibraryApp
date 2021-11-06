@@ -1,8 +1,12 @@
 <p class="text-5xl mb-4">Books</p>
 
-<div class="flex justify-end mb-2">
-  <button class="bg-blue-500 rounded-md py-2 px-4 text-lg text-white">+ New Book</button>
-</div>
+<% if logged_in? %>
+  <div class="flex justify-end mb-2">
+    <button class="bg-blue-500 rounded-md py-2 px-4 text-lg text-white">
+      <%= link_to "+ New Book", new_book_path %>
+    </button>
+  </div>
+<% end %>
 
 <div class="overflow-x-auto">
   <table class="w-full table-auto rounded-md box-border">

@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       minHeight: (theme) => ({
         ...theme('spacing')
+      }),
+      minWidth: (theme) => ({
+        ...theme('spacing')
       })
     }
   }

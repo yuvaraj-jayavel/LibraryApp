@@ -3,9 +3,7 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-  def new
-    @book = Book.new
-  end
+  def new; end
 
   def create
     @book = Book.create_with_associated_models(book_params)
