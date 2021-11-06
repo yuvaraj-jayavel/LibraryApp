@@ -12,7 +12,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'can create with all the parameters' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference 'Book.count', 1 do
@@ -33,7 +33,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'new author is not created when given an existing author_name' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference 'Book.count', 1 do
@@ -56,7 +56,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'new publisher is not created when given an existing publisher_name' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference 'Book.count', 1 do
@@ -79,7 +79,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'new category is not created when given an existing category in categories' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference 'Book.count', 1 do
@@ -102,7 +102,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'can be created with empty categories' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference 'Book.count', 1 do
@@ -123,7 +123,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'can be created with empty publishing_year' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference 'Book.count', 1 do
@@ -144,7 +144,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'can be created with empty publisher_name' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference 'Book.count', 1 do
@@ -165,7 +165,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'cannot be created with empty author_name' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_no_difference 'Book.count' do
@@ -185,7 +185,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'cannot be created with empty name' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_no_difference 'Book.count' do
@@ -222,7 +222,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'can be created with one category' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference ['Category.count'], 1 do
@@ -261,7 +261,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'should not create new author if author name contains extra whitespace' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference ['Book.count', 'Publisher.count', 'Category.count'], 1 do
@@ -284,7 +284,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'should not create new publisher if publisher name contains extra whitespace' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference ['Book.count', 'Author.count', 'Category.count'], 1 do
@@ -307,7 +307,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'should not create new category if category contains extra whitespace' do
-    get books_new_path
+    get new_book_path
     assert_response :success
 
     assert_difference ['Book.count', 'Author.count', 'Publisher.count'], 1 do
