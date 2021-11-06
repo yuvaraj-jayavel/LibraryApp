@@ -1,9 +1,0 @@
-<% if @member_book_rentals.length > 0 %>
-  <div>
-    <%= collection_check_boxes :return, :book_rental_ids, @member_book_rentals, :id, :borrowed_book, required: true %>
-  </div>
-<% else %>
-  <div class="flex w-full justify-center items-center">
-    <p class="font-light text-gray-400 italic">No books available</p>
-  </div>
-<% end %>

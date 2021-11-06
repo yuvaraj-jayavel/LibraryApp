@@ -25,11 +25,11 @@ class BookRental < ApplicationRecord
     issued_on + DUE_BY_DAYS.days
   end
 
-  def fine
-    if returned? || due_by >= Date.today
+  def fine(returned_on = Date.today)
+    if returned? || due_by >= returned_on
       0
     else
-      ((Date.today - due_by) * FINE_PER_DAY)
+      ((returned_on - due_by) * FINE_PER_DAY).to_f
     end
   end
 

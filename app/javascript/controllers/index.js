@@ -3,5 +3,8 @@
 
 import { application } from "./application"
 
+import BookRentalReturnController from "./book_rental_return_controller.js"
+application.register("book-rental-return", BookRentalReturnController)
+
 import ReturnsFormController from "./returns_form_controller.js"
 application.register("returns-form", ReturnsFormController)
