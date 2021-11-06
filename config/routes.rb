@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'book_rentals/index'
-  get 'members/index'
   get 'sessions/new'
-  get 'books/new'
-  get 'books/index'
-  resources :books
-  resources :members
-  resources :book_rentals
+  resources :books, only: %i[create new index]
+  resources :members, only: %i[create new index]
+  resources :book_rentals, only: %i[create new index]
   resources :returns, only: %i[create new]
   resources :member_book_rentals, only: %i[index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
