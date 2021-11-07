@@ -1,0 +1,13 @@
+<% flash.each do |flash_type, flash_content| %>
+  <% if flash_type == 'form_errors' && flash_content.respond_to?('each') %>
+    <div class="bg-red-100 p-3 pl-8 mb-4 rounded-md font-bold text-red-700 border border-red-500 text-left">
+      <% flash_content.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </div>
+  <% elsif flash_type == 'form_error' %>
+    <div class="bg-red-100 p-3 mb-4 rounded-md font-bold text-red-700 border border-red-500 text-center">
+      <%= flash_content %>
+    </div>
+  <% end %>
+<% end %>
