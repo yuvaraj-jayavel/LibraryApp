@@ -13,9 +13,11 @@ class MembersController < ApplicationController
     authorize Member
     @member = Member.create(member_params)
     if @member.valid?
+      flash[:snack_success] = "Successfully created member #{@member.name}"
       redirect_to members_path
     else
-      render 'new'
+      flash[:form_errors] = @member.errors.full_messages
+      redirect_to new_member_path
     end
   end
 

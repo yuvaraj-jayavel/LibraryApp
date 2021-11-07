@@ -36,8 +36,8 @@ class CreateMemberTest < ActionDispatch::IntegrationTest
                personal_number: nil
              }
            }
-      assert_template :new
-      assert_response :success
+      assert_redirected_to new_member_path
+      assert_not_nil flash[:form_errors]
     end
   end
 
