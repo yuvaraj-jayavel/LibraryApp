@@ -89,7 +89,7 @@ class BookTest < ActiveSupport::TestCase
                       -> { Category.count } => 2 do
       book = Book.create_with_associated_models(name: @book_name, author_name: @author_name,
                                                 publisher_name: @publisher_name, publishing_year: @publishing_year,
-                                                categories: @categories)
+                                                category_names: @categories)
       assert book.valid?
       assert_equal book.name, @book_name
       assert_equal book.author.name, @author_name
@@ -103,35 +103,35 @@ class BookTest < ActiveSupport::TestCase
   test 'cannot create with associated models when book name is missing' do
     book = Book.create_with_associated_models(name: nil, author_name: @author_name,
                                               publisher_name: @publisher_name, publishing_year: @publishing_year,
-                                              categories: @categories)
+                                              category_names: @categories)
     assert book.invalid?
   end
 
   test 'cannot create with associated models when author name is missing' do
     book = Book.create_with_associated_models(name: @book_name, author_name: nil,
                                               publisher_name: @publisher_name, publishing_year: @publishing_year,
-                                              categories: @categories)
+                                              category_names: @categories)
     assert book.invalid?
   end
 
   test 'can create with associated models when publisher name is missing' do
     book = Book.create_with_associated_models(name: @book_name, author_name: @author_name,
                                               publisher_name: nil, publishing_year: @publishing_year,
-                                              categories: @categories)
+                                              category_names: @categories)
     assert book.valid?
   end
 
   test 'can create with associated models when publishing year is missing' do
     book = Book.create_with_associated_models(name: @book_name, author_name: @author_name,
                                               publisher_name: @publisher_name, publishing_year: nil,
-                                              categories: @categories)
+                                              category_names: @categories)
     assert book.valid?
   end
 
   test 'can create with associated models when categories is missing' do
     book = Book.create_with_associated_models(name: @book_name, author_name: @author_name,
                                               publisher_name: @publisher_name, publishing_year: nil,
-                                              categories: nil)
+                                              category_names: nil)
     assert book.valid?
   end
 
@@ -140,7 +140,7 @@ class BookTest < ActiveSupport::TestCase
     assert_difference -> { Book.count } => 1, -> { Author.count } => 0 do
       book = Book.create_with_associated_models(name: @book_name, author_name: existing_author_name,
                                                 publisher_name: @publisher_name, publishing_year: nil,
-                                                categories: nil)
+                                                category_names: nil)
       assert_equal book.author.name, existing_author_name
       assert book.valid?
     end
@@ -151,7 +151,7 @@ class BookTest < ActiveSupport::TestCase
     assert_difference -> { Book.count } => 1, -> { Publisher.count } => 0 do
       book = Book.create_with_associated_models(name: @book_name, author_name: @author_name,
                                                 publisher_name: existing_publisher_name, publishing_year: nil,
-                                                categories: nil)
+                                                category_names: nil)
       assert_equal book.publisher.name, existing_publisher_name
       assert book.valid?
     end
@@ -163,7 +163,7 @@ class BookTest < ActiveSupport::TestCase
     assert_difference -> { Book.count } => 1, -> { Category.count } => 0 do
       book = Book.create_with_associated_models(name: @book_name, author_name: @author_name,
                                                 publisher_name: @publisher_name, publishing_year: nil,
-                                                categories: "#{existing_category1_name}, #{existing_category2_name}")
+                                                category_names: "#{existing_category1_name}, #{existing_category2_name}")
       assert_equal book.categories.map(&:name).sort, [existing_category1_name, existing_category2_name].sort
       assert book.valid?
     end
@@ -173,7 +173,7 @@ class BookTest < ActiveSupport::TestCase
     assert_no_difference ['Book.count', 'Author.count', 'Publisher.count', 'Category.count'] do
       book = Book.create_with_associated_models(name: nil, author_name: @author_name,
                                                 publisher_name: @publisher_name, publishing_year: @publishing_year,
-                                                categories: @categories)
+                                                category_names: @categories)
       # name is blank and hence book create is invalid
       assert book.invalid?
     end
