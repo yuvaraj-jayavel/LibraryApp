@@ -1,6 +1,9 @@
 require "test_helper"
 
 class CreateMemberTest < ActionDispatch::IntegrationTest
+  def setup
+    log_in_as staffs(:admino)
+  end
   test 'should create member with only the required fields' do
     get new_member_path
     assert_response :success
