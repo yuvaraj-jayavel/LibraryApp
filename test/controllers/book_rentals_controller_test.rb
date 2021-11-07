@@ -29,7 +29,6 @@ class BookRentalsControllerTest < ActionDispatch::IntegrationTest
       assert_response :redirect
       follow_redirect!
       assert_template 'book_rentals/index'
-      assert flash.empty?
     end
   end
 
