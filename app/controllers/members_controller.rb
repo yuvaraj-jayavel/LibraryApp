@@ -1,13 +1,16 @@
 class MembersController < ApplicationController
   def index
+    authorize Member
     @members = Member.all
   end
 
   def new
     @member = Member.new
+    authorize @member
   end
 
   def create
+    authorize Member
     @member = Member.create(member_params)
     if @member.valid?
       redirect_to members_path
