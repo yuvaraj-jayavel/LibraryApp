@@ -1,7 +1,11 @@
-require "test_helper"
+require 'test_helper'
 
 class BookRentalsControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
+  def setup
+    log_in_as staffs(:admino)
+  end
+  
+  test 'should get index' do
     get book_rentals_path
     assert_response :success
   end
@@ -49,6 +53,27 @@ class BookRentalsControllerTest < ActionDispatch::IntegrationTest
       assert_not flash.empty?
       get root_path
       assert flash.empty?
+    end
+  end
+
+  test 'should not be able to get index when logged out' do
+    delete logout_path
+    assert_raises Pundit::NotAuthorizedError do
+      get book_rentals_path
+    end
+  end
+
+  test 'should not be able to get new page when logged out' do
+    delete logout_path
+    assert_raises Pundit::NotAuthorizedError do
+      get new_book_rental_path
+    end
+  end
+
+  test 'should not be able to create new book rental when logged out' do
+    delete logout_path
+    assert_raises Pundit::NotAuthorizedError do
+      post book_rentals_path
     end
   end
 end

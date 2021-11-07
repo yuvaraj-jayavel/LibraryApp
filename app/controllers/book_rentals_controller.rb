@@ -1,13 +1,16 @@
 class BookRentalsController < ApplicationController
   def index
+    authorize BookRental
     @book_rentals = BookRental.all
   end
 
   def new
+    authorize BookRental
     @book_rental = BookRental.new
   end
 
   def create
+    authorize BookRental
     @book_rental = BookRental.create(book_rental_params)
     if @book_rental.valid?
       redirect_to book_rentals_path
