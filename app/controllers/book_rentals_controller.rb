@@ -1,7 +1,7 @@
 class BookRentalsController < ApplicationController
   def index
     authorize BookRental
-    @book_rentals = BookRental.all
+    @book_rentals = BookRental.all.includes(:book, :member)
   end
 
   def new
