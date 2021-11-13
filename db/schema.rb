@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_11_04_121516) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "authors", force: :cascade do |t|
     t.text "name"
     t.datetime "created_at", precision: 6, null: false
@@ -19,8 +22,8 @@ ActiveRecord::Schema.define(version: 2021_11_04_121516) do
   end
 
   create_table "book_categories", force: :cascade do |t|
-    t.integer "book_id", null: false
-    t.integer "category_id", null: false
+    t.bigint "book_id", null: false
+    t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_id"], name: "index_book_categories_on_book_id"
@@ -28,9 +31,9 @@ ActiveRecord::Schema.define(version: 2021_11_04_121516) do
   end
 
   create_table "book_rentals", force: :cascade do |t|
-    t.integer "book_id", null: false
-    t.integer "member_id", null: false
-    t.date "issued_on"
+    t.bigint "book_id", null: false
+    t.bigint "member_id", null: false
+    t.date "issued_on", default: -> { "CURRENT_TIMESTAMP" }
     t.date "returned_on"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -41,8 +44,8 @@ ActiveRecord::Schema.define(version: 2021_11_04_121516) do
   create_table "books", force: :cascade do |t|
     t.text "name"
     t.integer "publishing_year"
-    t.integer "author_id", null: false
-    t.integer "publisher_id"
+    t.bigint "author_id", null: false
+    t.bigint "publisher_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_books_on_author_id"
@@ -85,7 +88,7 @@ ActiveRecord::Schema.define(version: 2021_11_04_121516) do
   create_table "staffs", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.integer "role_id", null: false
+    t.bigint "role_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "remember_digest"
