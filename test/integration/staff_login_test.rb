@@ -45,6 +45,7 @@ class StaffLoginTest < ActionDispatch::IntegrationTest
     assert_not is_logged_in?
     assert_redirected_to root_path
     follow_redirect!
+    assert_not_nil flash[:snack_success]
     assert_select 'a[href=?]', login_path
     assert_select 'a[href=?]', logout_path, 0
   end

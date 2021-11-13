@@ -7,6 +7,8 @@ class Book < ApplicationRecord
   has_many :categories, through: :book_categories
   has_many :book_rentals
 
+  attr_accessor :category_names
+
   validates :name, presence: true
   validates :publishing_year, numericality: { allow_nil: true, less_than_or_equal_to: Time.now.year }
   validates :author_id, presence: true
@@ -15,7 +17,7 @@ class Book < ApplicationRecord
     Book.transaction do
       author = Author.find_or_create_by(name: hash[:author_name])
       publisher = Publisher.find_or_create_by(name: hash[:publisher_name])
-      categories = hash[:categories]&.split(',')&.map do |category_name|
+      categories = hash[:category_names]&.split(',')&.map do |category_name|
         Category.find_or_create_by(name: category_name.strip)
       end || []
       @new_book = Book.create(name: hash[:name], author: author, publisher: publisher,

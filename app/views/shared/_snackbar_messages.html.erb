@@ -1,0 +1,5 @@
+<% flash.each do |message_type, message| %>
+  <% if message_type == 'snack_success' %>
+    <%= render "shared/snackbar", message: message %>
+  <% end %>
+<% end %>

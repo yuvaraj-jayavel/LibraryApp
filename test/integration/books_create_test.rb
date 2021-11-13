@@ -24,7 +24,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                author_name: 'Dan Brown',
                publisher_name: 'Penguin Labs',
                publishing_year: '2010',
-               categories: 'Mystery, Crime'
+               category_names: 'Mystery, Crime'
              }
            }
       assert_response :redirect
@@ -46,7 +46,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                  author_name: @author.name,
                  publisher_name: 'Penguin Labs',
                  publishing_year: '2010',
-                 categories: 'Mystery, Crime'
+                 category_names: 'Mystery, Crime'
                }
              }
         assert_response :redirect
@@ -69,7 +69,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                  author_name: 'Dan Brown',
                  publisher_name: @publisher.name,
                  publishing_year: '2010',
-                 categories: 'Mystery, Crime'
+                 category_names: 'Mystery, Crime'
                }
              }
         assert_response :redirect
@@ -79,7 +79,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test 'new category is not created when given an existing category in categories' do
+  test 'new category is not created when given an existing category in category_names' do
     get new_book_path
     assert_response :success
 
@@ -92,7 +92,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                  author_name: 'Dan Brown',
                  publisher_name: 'Penguin Labs',
                  publishing_year: '2010',
-                 categories: @category1.name
+                 category_names: @category1.name
                }
              }
         assert_response :redirect
@@ -102,7 +102,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test 'can be created with empty categories' do
+  test 'can be created with empty category_names' do
     get new_book_path
     assert_response :success
 
@@ -114,7 +114,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                author_name: 'Dan Brown',
                publisher_name: 'Penguin Labs',
                publishing_year: '2010',
-               categories: ''
+               category_names: ''
              }
            }
       assert_response :redirect
@@ -135,7 +135,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                author_name: 'Dan Brown',
                publisher_name: 'Penguin Labs',
                publishing_year: '',
-               categories: 'Mystery, Thriller'
+               category_names: 'Mystery, Thriller'
              }
            }
       assert_response :redirect
@@ -156,7 +156,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                author_name: 'Dan Brown',
                publisher_name: '',
                publishing_year: '2010',
-               categories: 'Mystery, Thriller'
+               category_names: 'Mystery, Thriller'
              }
            }
       assert_response :redirect
@@ -177,11 +177,11 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                author_name: '',
                publisher_name: 'Penguin Labs',
                publishing_year: '2010',
-               categories: 'Mystery, Thriller'
+               category_names: 'Mystery, Thriller'
              }
            }
-      assert_template :new
-      assert_response :success
+      assert_not_nil flash[:form_errors]
+      assert_redirected_to new_book_path
     end
   end
 
@@ -197,11 +197,11 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                author_name: 'Dan Brown',
                publisher_name: 'Penguin Labs',
                publishing_year: '2010',
-               categories: 'Mystery, Thriller'
+               category_names: 'Mystery, Thriller'
              }
            }
-      assert_template :new
-      assert_response :success
+      assert_redirected_to new_book_path
+      assert_not_nil flash[:form_errors]
     end
   end
 
@@ -214,11 +214,11 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                author_name: 'Dan Brown',
                publisher_name: 'Penguin Labs',
                publishing_year: '2010',
-               categories: 'Mystery, Thriller'
+               category_names: 'Mystery, Thriller'
              }
            }
-      assert_template :new
-      assert_response :success
+      assert_redirected_to new_book_path
+      assert_not_nil flash[:form_errors]
     end
   end
 
@@ -234,7 +234,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                author_name: 'Dan Brown',
                publisher_name: 'Penguin Labs',
                publishing_year: '2010',
-               categories: 'Mystery'
+               category_names: 'Mystery'
              }
            }
       assert_response :redirect
@@ -252,7 +252,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                author_name: '  Dan Brown   ',
                publisher_name: '    Penguin Labs    ',
                publishing_year: '2010',
-               categories: '    Mystery        '
+               category_names: '    Mystery        '
              }
            }
       assert_response :redirect
@@ -274,7 +274,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                  author_name: "   #{@author.name.gsub(/\s/, '    ')}   ",
                  publisher_name: 'Penguin Labs',
                  publishing_year: '2010',
-                 categories: 'Mystery'
+                 category_names: 'Mystery'
                }
              }
         assert_response :redirect
@@ -297,7 +297,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                  author_name: 'Dan Brown',
                  publisher_name: "   #{@publisher.name.gsub(/\s/, '    ')}   ",
                  publishing_year: '2010',
-                 categories: 'Mystery'
+                 category_names: 'Mystery'
                }
              }
         assert_response :redirect
@@ -320,7 +320,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                  author_name: 'Dan Brown',
                  publisher_name: 'Penguin Labs',
                  publishing_year: '2010',
-                 categories: "   #{@category1.name.gsub(/\s/, '    ')}   "
+                 category_names: "   #{@category1.name.gsub(/\s/, '    ')}   "
                }
              }
         assert_response :redirect
@@ -340,7 +340,7 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
                author_name: 'Dan Brown',
                publisher_name: 'Penguin Labs',
                publishing_year: '2010',
-               categories: 'Mystery, Crime'
+               category_names: 'Mystery, Crime'
              }
            }
     end
