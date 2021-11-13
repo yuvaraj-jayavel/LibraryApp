@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Book < ApplicationRecord
+  include PgSearch::Model
+
   belongs_to :author
   belongs_to :publisher, optional: true
   has_many :book_categories
@@ -12,6 +14,16 @@ class Book < ApplicationRecord
   validates :name, presence: true
   validates :publishing_year, numericality: { allow_nil: true, less_than_or_equal_to: Time.now.year }
   validates :author_id, presence: true
+
+  pg_search_scope :search,
+                  against: %i[name],
+                  associated_against: {
+                    author: :name,
+                    publisher: :name
+                  },
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 
   def self.create_with_associated_models(hash = {})
     Book.transaction do

@@ -62,3 +62,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'cssbundling-rails'
 gem 'stimulus-rails'
 gem 'pundit'
+
+gem 'pg_search', '~> 2.3'

@@ -45,4 +45,24 @@ class BookRentalTest < ActiveSupport::TestCase
     assert_equal (returning_on - book_rental.due_by) * BookRental::FINE_PER_DAY, book_rental.fine(returning_on)
     assert book_rental.fine.instance_of? Float
   end
+
+  test 'search should match book rental by book name' do
+    book_rental = book_rentals(:unreturned)
+    assert_includes BookRental.search(book_rental.book.name), book_rental
+  end
+
+  test 'search should match book rental by partial book name' do
+    book_rental = book_rentals(:unreturned)
+    assert_includes BookRental.search(book_rental.book.name[..-2]), book_rental
+  end
+
+  test 'search should match book rental by member name' do
+    book_rental = book_rentals(:unreturned)
+    assert_includes BookRental.search(book_rental.member.name), book_rental
+  end
+
+  test 'search should match book rental by partial member name' do
+    book_rental = book_rentals(:unreturned)
+    assert_includes BookRental.search(book_rental.member.name[..-2]), book_rental
+  end
 end

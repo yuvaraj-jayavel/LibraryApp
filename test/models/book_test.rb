@@ -243,4 +243,39 @@ class BookTest < ActiveSupport::TestCase
 
     assert_not_includes Book.available, returned_and_borrowed_again_book
   end
+
+  test 'search should match book by name' do
+    book = books(:five_point_someone)
+    assert_includes Book.search(book.name), book
+  end
+
+  test 'search should match book by partial name' do
+    book = books(:five_point_someone)
+    assert_includes Book.search(book.name[..-2]), book
+  end
+
+  test 'search should match book by author name' do
+    book = books(:five_point_someone)
+    assert_includes Book.search(book.author.name), book
+  end
+
+  test 'search should match book by partial author name' do
+    book = books(:five_point_someone)
+    assert_includes Book.search(book.author.name[..-2]), book
+  end
+
+  test 'search should match book by publisher name' do
+    book = books(:five_point_someone)
+    assert_includes Book.search(book.publisher.name), book
+  end
+
+  test 'search should match book by partial publisher name' do
+    book = books(:five_point_someone)
+    assert_includes Book.search(book.publisher.name[..-2]), book
+  end
+
+  test 'search should not match any book for a gibberish search term' do
+    search_results = Book.search('bodkinromero')
+    assert_empty search_results
+  end
 end
