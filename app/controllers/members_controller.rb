@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
   def index
     authorize Member
-    @members = Member.all
+    @members = Member.search(member_search_params[:search])
   end
 
   def new
@@ -27,5 +27,11 @@ class MembersController < ApplicationController
       .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
       .reject { |_k, v| v.blank? }
       .permit(:name, :personal_number, :email, :phone, :father_name, :date_of_birth, :date_of_retirement)
+  end
+
+  def member_search_params
+    params
+      .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
+      .permit(:search)
   end
 end

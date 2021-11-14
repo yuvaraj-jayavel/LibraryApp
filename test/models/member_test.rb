@@ -83,4 +83,24 @@ class MemberTest < ActiveSupport::TestCase
     assert @member.valid?
     assert another_member.valid?
   end
+
+  test 'search by name should match member by name' do
+    member = members(:johnny)
+    assert_includes Member.search(member.name), member
+  end
+
+  test 'search by id should match member by id' do
+    member = members(:johnny)
+    assert_includes Member.search(member.id), member
+  end
+
+  test 'search by id should match member by personal number' do
+    member = members(:johnny)
+    assert_includes Member.search(member.personal_number), member
+  end
+
+  test 'empty search query should return all members' do
+    search_results = Member.search('')
+    assert_equal Member.all, search_results
+  end
 end

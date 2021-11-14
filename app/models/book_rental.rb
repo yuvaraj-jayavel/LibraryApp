@@ -1,4 +1,6 @@
 class BookRental < ApplicationRecord
+  include PgSearch::Model
+
   DUE_BY_DAYS = 15
   FINE_PER_DAY = 1
 
@@ -8,6 +10,23 @@ class BookRental < ApplicationRecord
   validate :book_is_available, on: :create
 
   scope :current, -> { where(returned_on: nil) }
+
+  pg_search_scope :search_by_name,
+                  associated_against: {
+                    book: :name,
+                    member: :name
+                  },
+                  using: {
+                    tsearch: { prefix: true }
+                  }
+
+  def self.search(query)
+    if query.present?
+      search_by_name(query)
+    else
+      all
+    end
+  end
 
   def borrower
     "#{member.name} ##{member.id}"
