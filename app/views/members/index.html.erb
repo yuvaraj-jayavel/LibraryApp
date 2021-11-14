@@ -41,8 +41,8 @@
         <td class="text-center p-2"><%= member.email %></td>
         <td class="text-center p-2"><%= member.phone %></td>
         <td class="text-center p-2"><%= member.father_name %></td>
-        <td class="text-center p-2"><%= member.date_of_birth %></td>
-        <td class="text-center p-2"><%= member.date_of_retirement %></td>
+        <td class="text-center p-2"><%= member.date_of_birth&.to_formatted_s(:long) %></td>
+        <td class="text-center p-2"><%= member.date_of_retirement&.to_formatted_s(:long) %></td>
       </tr>
     <% end %>
     </tbody>

@@ -35,8 +35,8 @@
         <td class="text-center p-2"><%= book_rental.id %></td>
         <td class="text-center p-2"><%= book_rental.borrowed_book %></td>
         <td class="text-center p-2"><%= book_rental.borrower %></td>
-        <td class="text-center p-2"><%= book_rental.issued_on %></td>
-        <td class="text-center p-2"><%= book_rental.returned_on %></td>
+        <td class="text-center p-2"><%= book_rental.issued_on&.to_formatted_s(:long) %></td>
+        <td class="text-center p-2"><%= book_rental.returned_on&.to_formatted_s(:long) %></td>
       </tr>
     <% end %>
     </tbody>
