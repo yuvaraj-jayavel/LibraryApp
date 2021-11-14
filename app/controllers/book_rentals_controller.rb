@@ -1,8 +1,7 @@
 class BookRentalsController < ApplicationController
   def index
     authorize BookRental
-    # @book_rentals = BookRental.all.includes(:book, :member)
-    @book_rentals = BookRental.includes(:book, :member).search(book_rental_search_params[:search])
+    @pagy, @book_rentals = pagy(BookRental.includes(:book, :member).search(book_rental_search_params[:search]))
   end
 
   def new
