@@ -21,7 +21,7 @@
 <% end %>
 
 <div class="overflow-x-auto">
-  <table class="w-full table-auto rounded-md box-border">
+  <table class="w-full table-auto rounded-md box-border border border-gray-300">
     <thead>
     <tr class="bg-gray-100">
       <th class="p-4">S.No.</th>
@@ -46,4 +46,4 @@
     </tbody>
   </table>
 </div>
-<%== pagy_nav(@pagy) %>
+<%= render partial: 'shared/pagination_bar', locals: { pagy: @pagy } %>
