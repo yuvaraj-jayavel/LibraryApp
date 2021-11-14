@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all.includes(:author, :publisher, :categories)
+    @books = Book.includes(:author, :publisher, :categories).search(book_search_params[:search])
   end
 
   def new
@@ -27,5 +27,11 @@ class BooksController < ApplicationController
       .require(:book)
       .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
       .permit(:name, :author_name, :publisher_name, :publishing_year, :category_names)
+  end
+
+  def book_search_params
+    params
+      .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
+      .permit(:search)
   end
 end

@@ -8,3 +8,6 @@ application.register("book-rental-return", BookRentalReturnController)
 
 import ReturnsFormController from "./returns_form_controller.js"
 application.register("returns-form", ReturnsFormController)
+
+import SearchFormController from "./search_form_controller.js"
+application.register("search-form", SearchFormController)

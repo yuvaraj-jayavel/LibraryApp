@@ -15,7 +15,7 @@ class Book < ApplicationRecord
   validates :publishing_year, numericality: { allow_nil: true, less_than_or_equal_to: Time.now.year }
   validates :author_id, presence: true
 
-  pg_search_scope :search,
+  pg_search_scope :search_by_name,
                   against: %i[name],
                   associated_against: {
                     author: :name,
@@ -24,6 +24,14 @@ class Book < ApplicationRecord
                   using: {
                     tsearch: { prefix: true }
                   }
+
+  def self.search(query)
+    if query.present?
+      search_by_name(query)
+    else
+      all
+    end
+  end
 
   def self.create_with_associated_models(hash = {})
     Book.transaction do

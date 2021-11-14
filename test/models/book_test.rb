@@ -278,4 +278,9 @@ class BookTest < ActiveSupport::TestCase
     search_results = Book.search('bodkinromero')
     assert_empty search_results
   end
+
+  test 'empty search query should return all books' do
+    search_results = Book.search('')
+    assert_equal Book.all, search_results
+  end
 end
