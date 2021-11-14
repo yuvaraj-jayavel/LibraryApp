@@ -1,15 +1,15 @@
 class BooksController < ApplicationController
   def index
+    @pagy, @books = pagy(
+      Book
+        .includes(:author, :publisher, :categories)
+        .filter_by(book_search_params.slice(:availability))
+        .search(book_search_params[:search]),
+      items: book_search_params[:max_results] || Pagy::DEFAULT[:items]
+    )
     respond_to do |format|
-      format.html do
-        @pagy, @books = pagy(Book.includes(:author, :publisher, :categories).search(book_search_params[:search]))
-        render 'index'
-      end
-      format.json do
-        @books = Book.includes(:author).search(book_search_params[:search],
-                                                                        book_search_params[:max_results])
-        render json: @books, include: { author: { only: :name } }
-      end
+      format.html
+      format.json { render json: @books, include: { author: { only: :name } } }
     end
   end
 
@@ -42,6 +42,6 @@ class BooksController < ApplicationController
   def book_search_params
     params
       .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
-      .permit(:search, :max_results)
+      .permit(:search, :max_results, :availability)
   end
 end

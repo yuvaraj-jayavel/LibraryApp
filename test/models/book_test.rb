@@ -286,4 +286,58 @@ class BookTest < ActiveSupport::TestCase
     normal_search_results = Book.search(book.name)
     assert_equal 2, normal_search_results.count
   end
+
+  test 'unavailable books should not contain returned book' do
+    book = book_rentals(:returned).book
+    assert_not_includes Book.unavailable, book
+  end
+
+  test 'unavailable books should not contain unborrowed book' do
+    book = books(:unborrowed)
+    assert_not_includes Book.unavailable, book
+  end
+
+  test 'unavailable books should contain unreturned book' do
+    book = book_rentals(:unreturned).book
+    assert_includes Book.unavailable, book
+  end
+
+  test 'unavailable books should contain returned then borrowed again book' do
+    book = book_rentals(:returned_and_borrowed_again).book
+    assert_includes Book.unavailable, book
+  end
+
+  test 'filter_by_availability should return available books when called with string "true"' do
+    filter_results = Book.filter_by_availability('true')
+    assert_equal Book.available, filter_results
+  end
+
+  test 'filter_by_availability should return available books when called with boolean true' do
+    filter_results = Book.filter_by_availability(true)
+    assert_equal Book.available, filter_results
+  end
+
+  test 'filter_by_availability should return unavailable books when called with string "false"' do
+    filter_results = Book.filter_by_availability('false')
+    assert_equal Book.unavailable, filter_results
+  end
+
+  test 'filter_by_availability should return unavailable books when called with boolean false' do
+    filter_results = Book.filter_by_availability(false)
+    assert_equal Book.unavailable, filter_results
+  end
+
+  test 'filter_by_available should return all books when called with any other value' do
+    filter_results = Book.filter_by_availability(nil)
+    assert_equal Book.all, filter_results
+
+    filter_results = Book.filter_by_availability('t')
+    assert_equal Book.all, filter_results
+
+    filter_results = Book.filter_by_availability('f')
+    assert_equal Book.all, filter_results
+
+    filter_results = Book.filter_by_availability('random')
+    assert_equal Book.all, filter_results
+  end
 end

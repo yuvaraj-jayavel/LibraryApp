@@ -4,8 +4,9 @@ import _ from "lodash"
 
 // Connects to data-controller="searchable-member-select"
 export default class extends Controller {
-  static values = { url: String }
+  static values = { url: String, filterParams: Object }
 
+  // TODO: DRY this controller. Duplicated from searchable_book_select_controller
   connect() {
     new TomSelect(this.element, {
       valueField: 'id',
@@ -13,7 +14,8 @@ export default class extends Controller {
       load: (query, callback) => {
         if (!query) return callback()
 
-        const url = `${this.urlValue}?search=${encodeURIComponent(query)}`
+        const params = new URLSearchParams({...this.filterParamsValue, search: query})
+        const url = `${this.urlValue}?` + params
         fetch(url, { headers: { 'Accept': 'application/json' }})
           .then(response => response.json())
           .then(responseItems => this.transformData(responseItems))

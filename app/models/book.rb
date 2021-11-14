@@ -2,6 +2,7 @@
 
 class Book < ApplicationRecord
   include PgSearch::Model
+  include Filterable
 
   belongs_to :author
   belongs_to :publisher, optional: true
@@ -23,6 +24,26 @@ class Book < ApplicationRecord
                   using: {
                     tsearch: { prefix: true }
                   }
+
+  # acts like a scope
+  def self.available
+    where.not(id: joins(:book_rentals).where(book_rentals: { returned_on: nil }))
+  end
+
+  def self.unavailable
+    where(id: joins(:book_rentals).where(book_rentals: { returned_on: nil }))
+  end
+
+  def self.filter_by_availability(availability)
+    case availability
+    when 'true', true
+      available
+    when 'false', false
+      unavailable
+    else
+      all
+    end
+  end
 
   def self.search_by_id(search_id)
     where(id: search_id)
@@ -51,10 +72,6 @@ class Book < ApplicationRecord
 
     end
     @new_book
-  end
-
-  def self.available
-    where.not(id: joins(:book_rentals).where(book_rentals: { returned_on: nil }))
   end
 
   def available?

@@ -8,7 +8,11 @@
         placeholder: 'Search book by ID, name or author name',
         required: true,
         class: "shadow border px-4 py-2 w-full rounded",
-        data: { controller: 'searchable-book-select', searchable_book_select_url_value: books_path }
+        data: {
+          controller: 'searchable-book-select',
+          searchable_book_select_url_value: books_path,
+          searchable_book_select_filter_params_value: { availability: true }
+        }
       } %>
     </div>
     <div class="flex flex-col mb-6">
