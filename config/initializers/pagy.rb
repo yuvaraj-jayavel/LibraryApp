@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'pagy/extras/overflow'
 
 # Pagy initializer file (5.3.1)
 # Customize only what you really need and notice that Pagy works also without any of the following lines.
@@ -154,7 +155,7 @@ Pagy::DEFAULT[:items] = 2
 # Overflow extra: Allow for easy handling of overflowing pages
 # See https://ddnexus.github.io/pagy/extras/overflow
 # require 'pagy/extras/overflow'
-# Pagy::DEFAULT[:overflow] = :empty_page    # default  (other options: :last_page and :exception)
+Pagy::DEFAULT[:overflow] = :last_page
 
 # Support extra: Extra support for features like: incremental, infinite, auto-scroll pagination
 # See https://ddnexus.github.io/pagy/extras/support
