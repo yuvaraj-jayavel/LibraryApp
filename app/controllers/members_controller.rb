@@ -1,15 +1,11 @@
 class MembersController < ApplicationController
   def index
     authorize Member
+    @pagy, @members = pagy(Member.search(member_search_params[:search]),
+                           items: member_search_params[:max_results] || Pagy::DEFAULT[:items])
     respond_to do |format|
-      format.html do
-        @pagy, @members = pagy(Member.search(member_search_params[:search]))
-        render 'index'
-      end
-      format.json do
-        @members = Member.search(member_search_params[:search], member_search_params[:max_results])
-        render json: @members
-      end
+      format.html
+      format.json { render json: @members }
     end
   end
 
