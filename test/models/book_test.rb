@@ -264,16 +264,6 @@ class BookTest < ActiveSupport::TestCase
     assert_includes Book.search(book.author.name[..-2]), book
   end
 
-  test 'search should match book by publisher name' do
-    book = books(:five_point_someone)
-    assert_includes Book.search(book.publisher.name), book
-  end
-
-  test 'search should match book by partial publisher name' do
-    book = books(:five_point_someone)
-    assert_includes Book.search(book.publisher.name[..-2]), book
-  end
-
   test 'search should not match any book for a gibberish search term' do
     search_results = Book.search('bodkinromero')
     assert_empty search_results
@@ -282,5 +272,18 @@ class BookTest < ActiveSupport::TestCase
   test 'empty search query should return all books' do
     search_results = Book.search('')
     assert_equal Book.all, search_results
+  end
+
+  test 'search should return only the max number of results given' do
+    book = books(:five_point_someone)
+    dup_book = book.dup
+    assert dup_book.valid?
+    dup_book.save!
+
+    limited_search_results = Book.search(book.name, 1)
+    assert_equal 1, limited_search_results.count
+
+    normal_search_results = Book.search(book.name)
+    assert_equal 2, normal_search_results.count
   end
 end

@@ -18,13 +18,13 @@ class Member < ApplicationRecord
     Member.where(id: search_id).or(Member.where(personal_number: search_id))
   end
 
-  def self.search(query)
+  def self.search(query, max_results = nil)
     if /^\d+$/.match(query.to_s)
-      search_by_id(query)
+      search_by_id(query).limit(max_results)
     elsif query.present?
-      search_by_name(query)
+      search_by_name(query).limit(max_results)
     else
-      all
+      all.limit(max_results)
     end
   end
 end

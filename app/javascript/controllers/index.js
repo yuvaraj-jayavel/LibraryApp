@@ -11,3 +11,9 @@ application.register("returns-form", ReturnsFormController)
 
 import SearchFormController from "./search_form_controller.js"
 application.register("search-form", SearchFormController)
+
+import SearchableBookSelectController from "./searchable_book_select_controller.js"
+application.register("searchable-book-select", SearchableBookSelectController)
+
+import SearchableMemberSelectController from "./searchable_member_select_controller.js"
+application.register("searchable-member-select", SearchableMemberSelectController)

@@ -9,7 +9,7 @@
   <div class="my-4">
     <%= form_with url: books_path, method: :get, class: "flex flex-row gap-2", data: { controller: 'search-form', search_form_target: 'form' } do |f| %>
       <%= f.search_field :search, {
-        placeholder: 'Search by book name or author',
+        placeholder: 'Search by book ID, name or author',
         value: params.dig(:search),
         class: "shadow border px-4 py-2 w-full rounded",
         data: { search_form_target: 'text' }

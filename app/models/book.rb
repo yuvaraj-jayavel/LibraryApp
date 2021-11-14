@@ -18,18 +18,23 @@ class Book < ApplicationRecord
   pg_search_scope :search_by_name,
                   against: %i[name],
                   associated_against: {
-                    author: :name,
-                    publisher: :name
+                    author: :name
                   },
                   using: {
                     tsearch: { prefix: true }
                   }
 
-  def self.search(query)
-    if query.present?
-      search_by_name(query)
+  def self.search_by_id(search_id)
+    where(id: search_id)
+  end
+
+  def self.search(query, max_results=nil)
+    if /^\d+$/.match(query.to_s)
+      search_by_id(query).limit(max_results)
+    elsif query.present?
+      search_by_name(query).limit(max_results)
     else
-      all
+      all.limit(max_results)
     end
   end
 
