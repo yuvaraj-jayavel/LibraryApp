@@ -1,7 +1,8 @@
 class BookRentalsController < ApplicationController
   def index
     authorize BookRental
-    @book_rentals = BookRental.all.includes(:book, :member)
+    # @book_rentals = BookRental.all.includes(:book, :member)
+    @book_rentals = BookRental.includes(:book, :member).search(book_rental_search_params[:search])
   end
 
   def new
@@ -29,5 +30,11 @@ class BookRentalsController < ApplicationController
       .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
       .reject { |_k, v| v.blank? }
       .permit(:book_id, :member_id, :issued_on)
+  end
+
+  def book_rental_search_params
+    params
+      .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
+      .permit(:search)
   end
 end

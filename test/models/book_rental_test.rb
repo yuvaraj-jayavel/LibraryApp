@@ -65,4 +65,9 @@ class BookRentalTest < ActiveSupport::TestCase
     book_rental = book_rentals(:unreturned)
     assert_includes BookRental.search(book_rental.member.name[..-2]), book_rental
   end
+
+  test 'empty search query should return all book rentals' do
+    search_results = BookRental.search('')
+    assert_equal BookRental.all, search_results
+  end
 end

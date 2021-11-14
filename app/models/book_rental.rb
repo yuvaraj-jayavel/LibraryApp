@@ -11,7 +11,7 @@ class BookRental < ApplicationRecord
 
   scope :current, -> { where(returned_on: nil) }
 
-  pg_search_scope :search,
+  pg_search_scope :search_by_name,
                   associated_against: {
                     book: :name,
                     member: :name
@@ -19,6 +19,14 @@ class BookRental < ApplicationRecord
                   using: {
                     tsearch: { prefix: true }
                   }
+
+  def self.search(query)
+    if query.present?
+      search_by_name(query)
+    else
+      all
+    end
+  end
 
   def borrower
     "#{member.name} ##{member.id}"
