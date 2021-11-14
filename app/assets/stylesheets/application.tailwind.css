@@ -10,3 +10,41 @@
   content: ' *';
   @apply text-red-500;
 }
+
+.pagy-nav,
+.pagy-nav-js {
+  @apply flex space-x-2;
+}
+
+.pagy-nav .page a,
+.pagy-nav .page.active,
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled,
+.pagy-nav-js .page a,
+.pagy-nav-js .page.active,
+.pagy-nav-js .page.prev.disabled,
+.pagy-nav-js .page.next.disabled {
+  @apply block rounded-lg px-3 py-1 text-sm text-gray-500 font-semibold bg-gray-200 shadow-md;
+}
+
+.pagy-nav .page a:hover,
+.pagy-nav .page.active:hover,
+.pagy-nav .page.prev.disabled:hover,
+.pagy-nav .page.next.disabled:hover,
+.pagy-nav-js .page a:hover,
+.pagy-nav-js .page.active:hover,
+.pagy-nav-js .page.prev.disabled:hover,
+.pagy-nav-js .page.next.disabled:hover {
+  @apply bg-gray-300;
+}
+
+.pagy-nav .page a:active,
+.pagy-nav .page.active:active,
+.pagy-nav .page.prev.disabled:active,
+.pagy-nav .page.next.disabled:active,
+.pagy-nav-js .page a:active,
+.pagy-nav-js .page.active:active,
+.pagy-nav-js .page.prev.disabled:active,
+.pagy-nav-js .page.next.disabled:active {
+  @apply bg-gray-400 text-white;
+}

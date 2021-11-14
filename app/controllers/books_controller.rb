@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.includes(:author, :publisher, :categories).search(book_search_params[:search])
+    @pagy, @books = pagy(Book.includes(:author, :publisher, :categories).search(book_search_params[:search]))
   end
 
   def new
