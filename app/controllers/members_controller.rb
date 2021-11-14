@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
   def index
     authorize Member
-    @members = Member.search(member_search_params[:search])
+    @pagy, @members = pagy(Member.search(member_search_params[:search]))
   end
 
   def new
