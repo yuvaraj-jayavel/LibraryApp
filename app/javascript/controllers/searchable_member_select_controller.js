@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import TomSelect from "tom-select"
 import _ from "lodash"
+import {tomSelectLoad} from "../utils/tom_select";
 
 // Connects to data-controller="searchable-member-select"
 export default class extends Controller {
@@ -11,17 +12,8 @@ export default class extends Controller {
     new TomSelect(this.element, {
       valueField: 'id',
       searchField: ['text'],
-      load: (query, callback) => {
-        if (!query) return callback()
-
-        const params = new URLSearchParams({...this.filterParamsValue, search: query})
-        const url = `${this.urlValue}?` + params
-        fetch(url, { headers: { 'Accept': 'application/json' }})
-          .then(response => response.json())
-          .then(responseItems => this.transformData(responseItems))
-          .then(items => callback(items))
-          .catch(() => callback())
-      },
+      load: (query, callback) => tomSelectLoad(query, callback, this.filterParamsValue,
+                                                                    this.urlValue, this.transformData)
     })
   }
 
