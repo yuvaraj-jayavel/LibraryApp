@@ -1,7 +1,10 @@
 class BookRentalsController < ApplicationController
   def index
     authorize BookRental
-    @pagy, @book_rentals = pagy(BookRental.includes(:book, :member).search(book_rental_search_params[:search]))
+    @pagy, @book_rentals = pagy(BookRental
+                                  .includes(:book, :member)
+                                  .filter_by(book_rental_filter_params.slice(:only_current))
+                                  .search(book_rental_filter_params[:search]))
   end
 
   def new
@@ -31,9 +34,9 @@ class BookRentalsController < ApplicationController
       .permit(:book_id, :member_id, :issued_on)
   end
 
-  def book_rental_search_params
+  def book_rental_filter_params
     params
       .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
-      .permit(:search)
+      .permit(:search, :only_current)
   end
 end

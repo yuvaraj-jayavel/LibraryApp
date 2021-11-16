@@ -1,4 +1,9 @@
 class BookRental < ApplicationRecord
+  include Filterable
+
+  # for some reason, the default sort does not order by id
+  default_scope { order(id: :asc) }
+
   include PgSearch::Model
 
   DUE_BY_DAYS = 15
@@ -23,6 +28,15 @@ class BookRental < ApplicationRecord
   def self.search(query)
     if query.present?
       search_by_name(query)
+    else
+      all
+    end
+  end
+
+  def self.filter_by_only_current(only_current)
+    case only_current
+    when 'true', true
+      current
     else
       all
     end

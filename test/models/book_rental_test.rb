@@ -70,4 +70,32 @@ class BookRentalTest < ActiveSupport::TestCase
     search_results = BookRental.search('')
     assert_equal BookRental.all, search_results
   end
+
+  test 'filter_by_only_current should return only currently rented out rentals when called with string "true"' do
+    filter_results = BookRental.filter_by_only_current('true')
+    assert_equal BookRental.current, filter_results
+  end
+
+  test 'filter_by_only_current should return only currently rented out rentals when called with boolean true' do
+    filter_results = BookRental.filter_by_only_current(true)
+    assert_equal BookRental.current, filter_results
+  end
+
+  test 'filter_by_only_current should return all rentals when called with string "false"' do
+    filter_results = BookRental.filter_by_only_current('false')
+    assert_equal BookRental.all, filter_results
+  end
+
+  test 'filter_by_only_current should return all rentals when called with boolean false' do
+    filter_results = BookRental.filter_by_only_current(false)
+    assert_equal BookRental.all, filter_results
+  end
+
+  test 'filter_by_only_current should return all rentals when called with blank values' do
+    filter_results = BookRental.filter_by_only_current(nil)
+    assert_equal BookRental.all, filter_results
+
+    filter_results = BookRental.filter_by_only_current('')
+    assert_equal BookRental.all, filter_results
+  end
 end

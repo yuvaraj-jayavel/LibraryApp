@@ -2,19 +2,30 @@
 
 <div class="flex justify-end mb-2">
   <button class="bg-blue-500 rounded-md py-2 px-4 text-lg text-white">
-    <%= link_to "+ New Rental",  new_book_rental_path %>
+    <%= link_to "+ New Rental", new_book_rental_path %>
   </button>
 </div>
 <div class="my-4">
-  <%= form_with url: book_rentals_path, method: :get, class: "flex flex-row gap-2", data: { controller: 'search-form', search_form_target: 'form' } do |f| %>
-    <%= f.search_field :search, {
-      placeholder: 'Search by book or member name',
-      value: params.dig(:search),
-      class: "shadow border px-4 py-2 w-full rounded",
-      data: { search_form_target: 'text' }
-    } %>
-    <%= f.submit "Search", class: "bg-blue-500 rounded-md py-2 px-4 text-lg text-white font-extrabold" %>
-    <%= button_tag "Reset", type: :reset, data: { action: 'search-form#reset' }, class: "bg-blue-500 rounded-md py-2 px-4 text-lg text-white font-extrabold" %>
+  <%= form_with url: book_rentals_path, method: :get, data: { controller: 'search-form', search_form_target: 'form' } do |f| %>
+    <div class="flex flex-row gap-2">
+      <%= f.search_field :search, {
+        placeholder: 'Search by book or member name',
+        value: params.dig(:search),
+        class: "shadow border px-4 py-2 w-full rounded",
+        data: { search_form_target: 'text' }
+      } %>
+      <%= f.submit "Search", class: "bg-blue-500 rounded-md py-2 px-4 text-lg text-white font-extrabold" %>
+      <%= button_tag "Reset", type: :reset, data: { action: 'search-form#reset' }, class: "bg-blue-500 rounded-md py-2 px-4 text-lg text-white font-extrabold" %>
+    </div>
+    <div class="p-3">
+      <%= f.check_box :only_current, {
+        class: 'mr-1',
+        include_hidden: false,
+        checked: params.dig(:only_current) == 'true',
+        onchange: ("this.form.submit()")
+      }, 'true', 'false' %>
+      <%= f.label :only_current, 'Show only currently rented', class: 'text-gray-700' %>
+    </div>
   <% end %>
 </div>
 
