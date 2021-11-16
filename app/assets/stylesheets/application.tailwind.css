@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,4 +11,32 @@
 .required-field-label:after {
   content: ' *';
   @apply text-red-500;
+}
+
+.btn-primary {
+  @apply bg-blue-500 rounded-md py-2 px-4 text-lg text-white font-extrabold;
+}
+
+.btn-secondary {
+  @apply rounded-md py-2 px-4 text-lg text-blue-500 border border-blue-500 font-extrabold;
+}
+
+.index-table {
+  @apply w-full table-auto rounded-xl box-border border border-gray-300;
+}
+
+.index-table thead tr {
+  @apply bg-gray-50
+}
+
+.index-table th {
+  @apply text-left p-4 uppercase text-gray-400 font-medium text-sm
+}
+
+.index-table tbody tr {
+  @apply border border-gray-300
+}
+
+.index-table tbody tr td {
+  @apply text-left p-4
 }

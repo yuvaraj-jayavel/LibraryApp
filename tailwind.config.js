@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['"Nunito Sans"', 'ui-sans-serif', 'system-ui']
+      },
       minHeight: (theme) => ({
         ...theme('spacing')
       }),

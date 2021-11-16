@@ -1,9 +1,11 @@
-<p class="text-5xl mb-4">Members</p>
 
-<div class="flex justify-end mb-2">
-  <button class="bg-blue-500 rounded-md py-2 px-4 text-lg text-white">
-    <%= link_to "+ New Member", new_member_path %>
-  </button>
+<div class="flex justify-between mb-2">
+  <div class="text-5xl font-black mb-4">Members</div>
+  <div>
+    <button class="rounded-md py-2 px-4 text-lg text-gray-500 border border-gray-400 font-semibold">
+      <%= link_to "+ New Member", new_member_path %>
+    </button>
+  </div>
 </div>
 <div class="my-4">
   <%= form_with url: members_path, method: :get, class: "flex flex-row gap-2", data: { controller: 'search-form', search_form_target: 'form' } do |f| %>
@@ -13,36 +15,36 @@
       class: "shadow border px-4 py-2 w-full rounded",
       data: { search_form_target: 'text' }
     } %>
-    <%= f.submit "Search", class: "bg-blue-500 rounded-md py-2 px-4 text-lg text-white font-extrabold" %>
-    <%= button_tag "Reset", type: :reset, data: { action: 'search-form#reset' }, class: "bg-blue-500 rounded-md py-2 px-4 text-lg text-white font-extrabold" %>
+    <%= f.submit "Search", class: "btn-primary" %>
+    <%= button_tag "Reset", type: :reset, data: { action: 'search-form#reset' }, class: "btn-secondary" %>
   <% end %>
 </div>
 
 <div class="overflow-x-auto">
-  <table class="w-full table-auto rounded-md box-border border border-gray-300">
+  <table class="index-table">
     <thead>
-    <tr class="bg-gray-100">
-      <th class="p-4">Member ID</th>
-      <th class="p-4">Name</th>
-      <th class="p-4">Personal Number</th>
-      <th class="p-4">Email</th>
-      <th class="p-4">Phone</th>
-      <th class="p-4">Father's Name</th>
-      <th class="p-4">Date of Birth</th>
-      <th class="p-4">Date of Retirement</th>
+    <tr>
+      <th>Member ID</th>
+      <th>Name</th>
+      <th>Personal Number</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Father's Name</th>
+      <th>Date of Birth</th>
+      <th>Date of Retirement</th>
     </tr>
     </thead>
     <tbody>
     <% @members.each do |member| %>
       <tr>
-        <td class="text-center p-2"><%= member.id %></td>
-        <td class="text-center p-2"><%= member.name %></td>
-        <td class="text-center p-2"><%= member.personal_number %></td>
-        <td class="text-center p-2"><%= member.email %></td>
-        <td class="text-center p-2"><%= member.phone %></td>
-        <td class="text-center p-2"><%= member.father_name %></td>
-        <td class="text-center p-2"><%= member.date_of_birth&.to_formatted_s(:long) %></td>
-        <td class="text-center p-2"><%= member.date_of_retirement&.to_formatted_s(:long) %></td>
+        <td><%= member.id %></td>
+        <td><%= member.name %></td>
+        <td><%= member.personal_number %></td>
+        <td><%= member.email %></td>
+        <td><%= member.phone %></td>
+        <td><%= member.father_name %></td>
+        <td><%= member.date_of_birth&.to_formatted_s(:long) %></td>
+        <td><%= member.date_of_retirement&.to_formatted_s(:long) %></td>
       </tr>
     <% end %>
     </tbody>

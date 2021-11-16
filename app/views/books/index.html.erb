@@ -1,12 +1,14 @@
-<p class="text-5xl mb-4">Books</p>
-
-<% if logged_in? %>
-  <div class="flex justify-end mb-2">
-    <button class="bg-blue-500 rounded-md py-2 px-4 text-lg text-white">
+<div class="flex justify-between mb-2">
+  <div class="text-5xl font-black mb-4">Books</div>
+  <% if logged_in? %>
+  <div>
+    <button class="rounded-md py-2 px-4 text-lg text-gray-500 border border-gray-400 font-semibold">
       <%= link_to "+ New Book", new_book_path %>
     </button>
   </div>
-<% end %>
+  <% end %>
+</div>
+
 <div class="my-4">
   <%= form_with url: books_path, method: :get, class: "flex flex-row gap-2", data: { controller: 'search-form', search_form_target: 'form' } do |f| %>
     <%= f.search_field :search, {
@@ -15,32 +17,32 @@
       class: "shadow border px-4 py-2 w-full rounded",
       data: { search_form_target: 'text' }
     } %>
-    <%= f.submit "Search", class: "bg-blue-500 rounded-md py-2 px-4 text-lg text-white font-extrabold" %>
-    <%= button_tag "Reset", type: :reset, data: { action: 'search-form#reset' }, class: "bg-blue-500 rounded-md py-2 px-4 text-lg text-white font-extrabold" %>
+    <%= f.submit "Search", class: "btn-primary" %>
+    <%= button_tag "Reset", type: :reset, data: { action: 'search-form#reset' }, class: "btn-secondary" %>
   <% end %>
 </div>
 
 <div class="overflow-x-auto">
-  <table class="w-full table-auto rounded-md box-border border border-gray-300">
+  <table class="index-table">
     <thead>
-    <tr class="bg-gray-100">
-      <th class="p-4">S.No.</th>
-      <th class="p-4">Name</th>
-      <th class="p-4">Author</th>
-      <th class="p-4">Publisher</th>
-      <th class="p-4">Year</th>
-      <th class="p-4">Categories</th>
+    <tr>
+      <th>S.No.</th>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Publisher</th>
+      <th>Year</th>
+      <th>Categories</th>
     </tr>
     </thead>
     <tbody>
     <% @books.each do |book| %>
       <tr>
-        <td class="text-center p-2"><%= book.id %></td>
-        <td class="text-center p-2"><%= book.name %></td>
-        <td class="text-center p-2"><%= book.author.name %></td>
-        <td class="text-center p-2"><%= book.publisher&.name %></td>
-        <td class="text-center p-2"><%= book.publishing_year %></td>
-        <td class="text-center p-2"><%= book.categories.map { |c| c.name }.join(', ') %></td>
+        <td><%= book.id %></td>
+        <td><%= book.name %></td>
+        <td><%= book.author.name %></td>
+        <td><%= book.publisher&.name %></td>
+        <td><%= book.publishing_year %></td>
+        <td><%= book.categories.map { |c| c.name }.join(', ') %></td>
       </tr>
     <% end %>
     </tbody>

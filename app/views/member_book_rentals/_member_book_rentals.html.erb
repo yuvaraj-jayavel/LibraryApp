@@ -1,27 +1,27 @@
 <% if @member_book_rentals.length > 0 %>
   <div class="overflow-x-auto w-full">
-    <table class="w-full table-auto rounded-md box-border">
+    <table class="index-table">
       <thead>
-      <tr class="bg-gray-100">
-        <th class="p-4"></th>
-        <th class="p-4">Book ID</th>
-        <th class="p-4">Name</th>
-        <th class="p-4">Issued on</th>
-        <th class="p-4">Due by</th>
-        <th class="p-4">Fine</th>
+      <tr>
+        <th></th>
+        <th>Book ID</th>
+        <th>Name</th>
+        <th>Issued on</th>
+        <th>Due by</th>
+        <th>Fine</th>
       </tr>
       </thead>
       <tbody>
       <% @member_book_rentals.each do |book_rental| %>
         <tr data-controller="book-rental-return" data-action="changed->returns-form#handleFineChange">
-          <td class="text-center p-2">
+          <td>
             <%= check_box :return, :book_rental_ids, {multiple: true, data: { action: "book-rental-return#handleChecked" }}, book_rental.id, nil %>
           </td>
-          <td class="text-center p-2"><%= book_rental.book.id %></td>
-          <td class="text-center p-2"><%= book_rental.book.name %></td>
-          <td class="text-center p-2"><%= book_rental.issued_on %></td>
-          <td class="text-center p-2"><%= book_rental.due_by %></td>
-          <td class="text-right p-2 pr-4">
+          <td><%= book_rental.book.id %></td>
+          <td><%= book_rental.book.name %></td>
+          <td><%= book_rental.issued_on %></td>
+          <td><%= book_rental.due_by %></td>
+          <td class="pr-4">
             &#8377; <span data-book-rental-return-target="fine"><%= "#{'%.2f' % book_rental.fine(@returning_on)}" %></span>
           </td>
         </tr>
