@@ -4,11 +4,11 @@
       <thead>
       <tr>
         <th></th>
-        <th>Book ID</th>
-        <th>Name</th>
-        <th>Issued on</th>
-        <th>Due by</th>
-        <th>Fine</th>
+        <th><%= t('book_id') %></th>
+        <th><%= t('name') %></th>
+        <th><%= t('issued_on') %></th>
+        <th><%= t('due_by') %></th>
+        <th><%= t('book_fine') %></th>
       </tr>
       </thead>
       <tbody>
@@ -31,6 +31,6 @@
   </div>
 <% else %>
   <div class="flex w-full justify-center items-center">
-    <p class="font-light text-gray-400 italic">No books available</p>
+    <p class="font-light text-gray-400 italic"><%= t('no_books_available') %></p>
   </div>
 <% end %>

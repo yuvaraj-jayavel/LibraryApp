@@ -22,7 +22,7 @@ class BooksController < ApplicationController
     authorize Book
     @book = Book.create_with_associated_models(book_params)
     if @book.valid?
-      flash[:snack_success] = "Successfully created book #{@book.name}"
+      flash[:snack_success] = I18n.t('successfully_created_book_name', name: @book.name)
       redirect_to books_path
     else
       redirect_to new_book_path

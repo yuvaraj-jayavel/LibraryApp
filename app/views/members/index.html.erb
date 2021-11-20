@@ -1,22 +1,22 @@
 
 <div class="flex justify-between mb-2">
-  <div class="text-5xl font-black mb-4">Members</div>
+  <div class="text-5xl font-black mb-4"><%= t('members') %></div>
   <div>
     <button class="rounded-md py-2 px-4 text-lg text-gray-500 border border-gray-400 font-semibold">
-      <%= link_to "+ New Member", new_member_path %>
+      <%= link_to "+ #{t('new_member')}", new_member_path %>
     </button>
   </div>
 </div>
 <div class="my-4">
   <%= form_with url: members_path, method: :get, class: "flex flex-row gap-2", data: { controller: 'search-form', search_form_target: 'form' } do |f| %>
     <%= f.search_field :search, {
-      placeholder: 'Search by name, ID or personal number',
+      placeholder: t('search_by_name_id_or_personal_number'),
       value: params.dig(:search),
       class: "shadow border px-4 py-2 w-full rounded",
       data: { search_form_target: 'text' }
     } %>
-    <%= f.submit "Search", class: "btn-primary" %>
-    <%= button_tag "Reset", type: :reset, data: { action: 'search-form#reset' }, class: "btn-secondary" %>
+    <%= f.submit t('search'), class: "btn-primary" %>
+    <%= button_tag t('reset'), type: :reset, data: { action: 'search-form#reset' }, class: "btn-secondary" %>
   <% end %>
 </div>
 
@@ -24,14 +24,14 @@
   <table class="index-table">
     <thead>
     <tr>
-      <th>Member ID</th>
-      <th>Name</th>
-      <th>Personal Number</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Father's Name</th>
-      <th>Date of Birth</th>
-      <th>Date of Retirement</th>
+      <th><%= t('member_id') %></th>
+      <th><%= t('name') %></th>
+      <th><%= t('personal_number') %></th>
+      <th><%= t('email') %></th>
+      <th><%= t('phone') %></th>
+      <th><%= t('father_s_name') %></th>
+      <th><%= t('date_of_birth') %></th>
+      <th><%= t('date_of_retirement') %></th>
     </tr>
     </thead>
     <tbody>

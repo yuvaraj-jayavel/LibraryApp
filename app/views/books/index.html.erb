@@ -1,9 +1,9 @@
 <div class="flex justify-between mb-2">
-  <div class="text-5xl font-black mb-4">Books</div>
+  <div class="text-5xl font-black mb-4"><%= t('books') %></div>
   <% if logged_in? %>
   <div>
     <button class="rounded-md py-2 px-4 text-lg text-gray-500 border border-gray-400 font-semibold">
-      <%= link_to "+ New Book", new_book_path %>
+      <%= link_to "+ #{t('new_book')}", new_book_path %>
     </button>
   </div>
   <% end %>
@@ -11,7 +11,7 @@
 
 <% unless logged_in? %>
   <div class="py-4 px-8 mb-4 text-md bg-yellow-100 rounded-md border border-yellow-300 text-yellow-500 font-semibold text-center">
-    <%= link_to "Login", login_path, class: "text-yellow-700 underline" %> as admin to access librarian functionalities
+    <%= t('demo_login_message_html', href: link_to(t('demo_login_message_href'), login_path, class: "text-yellow-700 underline")) %>
   </div>
 <% end %>
 
@@ -19,13 +19,13 @@
 <div class="my-4">
   <%= form_with url: books_path, method: :get, class: "flex flex-row gap-2", data: { controller: 'search-form', search_form_target: 'form' } do |f| %>
     <%= f.search_field :search, {
-      placeholder: 'Search by book ID, name or author',
+      placeholder: t('search_by_book_id_name_or_author'),
       value: params.dig(:search),
       class: "shadow border px-4 py-2 w-full rounded",
       data: { search_form_target: 'text' }
     } %>
-    <%= f.submit "Search", class: "btn-primary" %>
-    <%= button_tag "Reset", type: :reset, data: { action: 'search-form#reset' }, class: "btn-secondary" %>
+    <%= f.submit t('search'), class: "btn-primary" %>
+    <%= button_tag t('reset'), type: :reset, data: { action: 'search-form#reset' }, class: "btn-secondary" %>
   <% end %>
 </div>
 
@@ -33,12 +33,12 @@
   <table class="index-table">
     <thead>
     <tr>
-      <th>S.No.</th>
-      <th>Name</th>
-      <th>Author</th>
-      <th>Publisher</th>
-      <th>Year</th>
-      <th>Categories</th>
+      <th><%= t('s_no') %></th>
+      <th><%= t('name') %></th>
+      <th><%= t('author') %></th>
+      <th><%= t('publisher') %></th>
+      <th><%= t('year') %></th>
+      <th><%= t('categories') %></th>
     </tr>
     </thead>
     <tbody>

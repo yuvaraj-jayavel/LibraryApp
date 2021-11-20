@@ -1,8 +1,8 @@
 <div class="flex justify-between mb-2">
-  <div class="text-5xl font-black mb-4">Book Rentals</div>
+  <div class="text-5xl font-black mb-4"><%= t('book_rentals') %></div>
   <div>
     <button class="rounded-md py-2 px-4 text-lg text-gray-500 border border-gray-400 font-semibold">
-      <%= link_to "+ New Rental", new_book_rental_path %>
+      <%= link_to "+ #{t('new_rental')}", new_book_rental_path %>
     </button>
   </div>
 </div>
@@ -11,13 +11,13 @@
   <%= form_with url: book_rentals_path, method: :get, data: { controller: 'search-form', search_form_target: 'form' } do |f| %>
     <div class="flex flex-row gap-2">
       <%= f.search_field :search, {
-        placeholder: 'Search by book or member name',
+        placeholder: t('search_by_book_or_member_name'),
         value: params.dig(:search),
         class: "shadow border px-4 py-2 w-full rounded",
         data: { search_form_target: 'text' }
       } %>
-      <%= f.submit "Search", class: "btn-primary" %>
-      <%= button_tag "Reset", type: :reset, data: { action: 'search-form#reset' }, class: "btn-secondary" %>
+      <%= f.submit t('search'), class: "btn-primary" %>
+      <%= button_tag t('reset'), type: :reset, data: { action: 'search-form#reset' }, class: "btn-secondary" %>
     </div>
     <div class="p-3">
       <%= f.check_box :only_current, {
@@ -26,7 +26,7 @@
         checked: params.dig(:only_current) == 'true',
         onchange: ("this.form.submit()")
       }, 'true', 'false' %>
-      <%= f.label :only_current, 'Show only currently rented', class: 'text-gray-700' %>
+      <%= f.label :only_current, t('show_only_currently_rented'), class: 'text-gray-700' %>
     </div>
   <% end %>
 </div>
@@ -35,11 +35,11 @@
   <table class="index-table">
     <thead>
     <tr>
-      <th>Issue ID</th>
-      <th>Book</th>
-      <th>Member</th>
-      <th>Issued On</th>
-      <th>Returned On</th>
+      <th><%= t('issue_id') %></th>
+      <th><%= t('book') %></th>
+      <th><%= t('member') %></th>
+      <th><%= t('issued_on') %></th>
+      <th><%= t('returned_on') %></th>
     </tr>
     </thead>
     <tbody>

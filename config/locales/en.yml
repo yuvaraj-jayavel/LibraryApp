@@ -1,33 +1,92 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  members: "Members"
+  new_member: "New Member"
+  search_by_name_id_or_personal_number: "Search by name, ID or personal number"
+  search: "Search"
+  reset: "Reset"
+  member_id: "Member ID"
+  name: "Name"
+  personal_number: "Personal Number"
+  email: "Email"
+  phone: "Phone"
+  father_s_name: "Father's Name"
+  date_of_birth: "Date of Birth"
+  date_of_retirement: "Date of Retirement"
+  create_member: "Create Member"
+  member_name_placeholder: "Abdul Kalam"
+  member_personal_id_placeholder: "8409"
+  member_email_placeholder: "abdulkalam@example.com"
+  member_phone_placeholder: "9876543210"
+  member_father_s_name_placeholder: "Jainulabiddin Marakayar"
+  create: "Create"
+  new_book: "New Book"
+  book_rentals: "Book Rentals"
+  search_by_book_or_member_name: "Search by book or member name"
+  show_only_currently_rented: "Show only currently rented"
+  issue_id: "Issue ID"
+  book: "Book"
+  member: "Member"
+  issued_on: "Issued On"
+  returned_on: "Returned On"
+  search_book_by_id_name_or_author_name: "Search book by ID, name or author name"
+  search_member_by_name_id_or_personal_number: "Search member by name, ID or personal number"
+  books: "Books"
+  new_rental: "New Rental"
+  demo_login_message_html: "%{href} as admin to access librarian functionalities"
+  demo_login_message_href: "Login"
+  search_by_book_id_name_or_author: "Search by book ID, name or author"
+  s_no: "S.No."
+  author: "Author"
+  publisher: "Publisher"
+  year: "Year"
+  categories: "Categories"
+  create_book: "Create Book"
+  book_name_placeholder: "Animal Farm"
+  book_author_placeholder: "George Orwell"
+  book_publisher_placeholder: "Secker and Warburg"
+  book_publishing_year_placeholder: "1945"
+  book_categories_placeholder: "Satire, Political"
+  author_name: "Author Name"
+  publisher_name: "Publisher Name"
+  publishing_year: "Publishing Year"
+  comma_separated: "Comma-separated"
+  html_title: "LibraryApp"
+  library_name: "Chennai Library"
+  rentals: "Rentals"
+  all: "All"
+  new: "New"
+  new_return: "New Return"
+  log_out: "Log Out"
+  log_in: "Log In"
+  book_id: "Book ID"
+  due_by: "Due by"
+  book_fine: "Fine"
+  no_books_available: "No books available"
+  return_verb: "Return"
+  total_fine: "Total Fine"
+  username_label: "Username"
+  password_label: "Password"
+  username_placeholder: "Enter username"
+  password_placeholder: "Enter password"
+  book_label: "Book"
+  member_label: "Member"
+  issued_on_label: "Issued On"
+  name_label: "Name"
+  author_name_label: "Author Name"
+  publisher_name_label: "Publisher Name"
+  publishing_year_label: "Publishing Year"
+  category_names_label: "Category Names"
+  personal_number_label: "Personal number"
+  email_label: "Email"
+  phone_number_label: "Phone number"
+  father_s_name_label: "Father's Name"
+  date_of_birth_label: "Date of birth"
+  date_of_retirement_label: "Date of retirement"
+  return: "Return"
+  successfully_created_member_name: "Successfully created member %{name}"
+  successfully_created_rental_due_by: "Successfully created rental. Due by %{due_by}"
+  successfully_created_book_name: "Successfully created book %{name}"
+  you_have_successfully_logged_out: "You have successfully logged out"
+  successfully_returned_books_for_member: "Successfully returned books for member #%{member_id}"
+  book_rentals_not_found_for_given_member: "Book rentals not found for given member"
+  invalid_username_or_password: "Invalid username or password!"
