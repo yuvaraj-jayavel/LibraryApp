@@ -66,3 +66,5 @@ gem 'pundit'
 gem 'pg_search', '~> 2.3'
 
 gem "pagy", "~> 5.3"
+
+gem "rails-i18n", "~> 6.0"

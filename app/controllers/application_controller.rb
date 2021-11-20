@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include Pundit
 
+  before_action do
+    I18n.locale = ENV['LOCALE']
+    @pagy_locale = ENV['LOCALE']
+  end
+
   def hello
     render html: 'Hello world!'
   end
