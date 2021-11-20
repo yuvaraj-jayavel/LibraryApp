@@ -90,3 +90,4 @@ ta:
   successfully_returned_books_for_member: "#%{member_id} உறுப்பினருக்கான புத்தகங்கள் வெற்றிகரமாக திருப்பிக் கொடுக்கப்பட்டன"
   book_rentals_not_found_for_given_member: "உறுப்பினருக்கு புத்தக விநியோகங்கள் காணப்படவில்லை"
   invalid_username_or_password: "தவறான பயனர்பெயர் அல்லது கடவுச்சொல்!"
+  create_book_rental: "புத்தக விநியோகத்தை உருவாக்கு"
