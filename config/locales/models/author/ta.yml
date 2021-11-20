@@ -1,0 +1,7 @@
+ta:
+  activerecord:
+    models:
+      author: "எழுத்தாளர்"
+    attributes:
+      author:
+        name: "பெயர்"

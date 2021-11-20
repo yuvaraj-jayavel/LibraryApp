@@ -1,0 +1,13 @@
+ta:
+  activerecord:
+    models:
+      book_rental: "புத்தக விநியோகம்"
+    attributes:
+      book_rental:
+        id: "விநியோக எண்"
+        book_id: "புத்தக எண்"
+        member_id: "உறுப்பினர் எண்"
+        issued_on: "விநியோகிக்கப்பட்ட தேதி"
+        returned_on: "திரும்பிய தேதி"
+        due_by: "நிலுவைத் தேதி"
+        fine: "அபராதம்"

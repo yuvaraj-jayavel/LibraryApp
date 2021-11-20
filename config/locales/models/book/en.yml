@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    models:
+      book: "Book"
+    attributes:
+      book:
+        id: "Book ID"
+        name: "Name"
+        publishing_year: "Publishing year"
+        author_id: "Author ID"
+        publisher_id: "Publisher ID"
