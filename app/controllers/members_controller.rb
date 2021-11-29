@@ -18,7 +18,7 @@ class MembersController < ApplicationController
     authorize Member
     @member = Member.create(member_params)
     if @member.valid?
-      flash[:snack_success] = "Successfully created member #{@member.name}"
+      flash[:snack_success] = I18n.t('successfully_created_member_name', name: @member.name)
       redirect_to members_path
     else
       flash[:form_errors] = @member.errors.full_messages

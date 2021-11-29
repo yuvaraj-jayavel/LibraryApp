@@ -1,0 +1,7 @@
+ta:
+  activerecord:
+    models:
+      category: "பிரிவு"
+    attributes:
+      author:
+        name: "பெயர்"

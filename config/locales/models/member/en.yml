@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    models:
+      member: "Member"
+    attributes:
+      member:
+        id: "Member ID"
+        name: "Name"
+        father_name: "Father's Name"
+        personal_number: "Personal Number"
+        date_of_birth: "Date of Birth"
+        date_of_retirement: "Date of Retirement"
+        email: "Email"
+        phone: "Phone"

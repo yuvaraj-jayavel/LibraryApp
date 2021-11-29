@@ -210,6 +210,9 @@ Pagy::DEFAULT[:overflow] = :last_page
 #                  filepath: 'path/to/pagy-xyz.yml',
 #                  pluralize: lambda{ |count| ... } )
 
+# Remove custom filepath for `ta` after this pull request (https://github.com/ddnexus/pagy/pull/349) is released
+Pagy::I18n.load({locale: 'en'},
+                {locale: 'ta', filepath: 'config/locales/pagy/ta.yml'})
 
 # I18n extra: uses the standard i18n gem which is ~18x slower using ~10x more memory
 # than the default pagy internal i18n (see above)

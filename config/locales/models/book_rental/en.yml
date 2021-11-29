@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    models:
+      book_rental: "Book rental"
+    attributes:
+      book_rental:
+        id: "Issue ID"
+        book_id: "Book ID"
+        member_id: "Member ID"
+        issued_on: "Issued on"
+        returned_on: "Returned on"
+        due_by: "Due by"
+        fine: "Fine"

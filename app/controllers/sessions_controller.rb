@@ -10,14 +10,14 @@ class SessionsController < ApplicationController
       remember staff
       redirect_to root_path
     else
-      flash.now[:form_error] = 'Invalid username or password!'
+      flash.now[:form_error] = I18n.t('invalid_username_or_password')
       render 'new'
     end
   end
 
   def destroy
     log_out
-    flash[:snack_success] = 'You have successfully logged out'
+    flash[:snack_success] = I18n.t('you_have_successfully_logged_out')
     redirect_to root_path
   end
 
