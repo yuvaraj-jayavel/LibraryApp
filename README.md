@@ -50,6 +50,10 @@ rails db:seed
 ```shell
 heroku login
 ```
+- Run migrations
+```shell
+heroku run rails db:migrate
+```
 - Push code to the `heroku` remote to deploy
 ```shell
 git push heroku master
@@ -59,7 +63,7 @@ git push heroku master
 
 This will always be a moving target because, well, software development is an iterative process.
 
-- [i18n](https://guides.rubyonrails.org/i18n.html) :earth_africa:
+- [~~i18n~~](https://guides.rubyonrails.org/i18n.html) :earth_africa:
 - Sorting tables :arrow_up::arrow_down:
 - Different permissions for librarians and admins :man_technologist: :woman_technologist: 
 - Handle renewals as a separate entity (currently renewals are done by returning and re-borrowing the book) :repeat_one:
