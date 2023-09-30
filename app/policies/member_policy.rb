@@ -1,6 +1,10 @@
 class MemberPolicy < ApplicationPolicy
+  def new?
+    user.admin?
+  end
+
   def create?
-    !!user
+    user.admin?
   end
 
   def index?
