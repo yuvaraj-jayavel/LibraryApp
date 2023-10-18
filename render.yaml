@@ -1,7 +1,7 @@
 databases:
   - name: LibraryApp
-    databaseName: LibraryApp
-    user: LibraryApp
+    databaseName: library_app_prod
+    user: library_app_prod
 
 services:
   - type: web
