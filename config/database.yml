@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: library_app_prod
+  database: <%= ENV['DATABASE_URL'] %>
