@@ -32,6 +32,7 @@ class Staff < ApplicationRecord
   end
 
   def authenticated?(remember_token)
+    debugger
     BCrypt::Password.new(remember_digest) == remember_token
   end
 end

@@ -26,17 +26,21 @@
 }
 
 .index-table thead tr {
-  @apply bg-gray-50
+  @apply bg-gray-50;
 }
 
 .index-table th {
-  @apply text-left p-4 uppercase text-gray-400 font-medium text-sm
+  @apply text-left p-4 uppercase text-gray-400 font-medium text-sm;
 }
 
 .index-table tbody tr {
-  @apply border border-gray-300
+  @apply border border-gray-300;
 }
 
 .index-table tbody tr td {
-  @apply text-left p-4
+  @apply text-left p-4;
+}
+
+.link-primary {
+  @apply cursor-pointer text-blue-500 underline font-bold;
 }
