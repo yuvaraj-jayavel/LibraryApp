@@ -87,6 +87,8 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    dockerfile-rails (1.5.10)
+      rails (>= 3.0.0)
     erubi (1.12.0)
     ffi (1.16.1)
     globalid (1.2.1)
@@ -237,6 +239,11 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.0.0)
+    sentry-rails (5.12.0)
+      railties (>= 5.0)
+      sentry-ruby (~> 5.12.0)
+    sentry-ruby (5.12.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
     spring (4.1.1)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
@@ -289,6 +296,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   cssbundling-rails
   debug (~> 1.8)
+  dockerfile-rails (>= 1.5)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   matrix (~> 0.4.2)
@@ -305,6 +313,8 @@ DEPENDENCIES
   rubocop-rails
   sass-rails (>= 6)
   selenium-webdriver
+  sentry-rails (~> 5.12)
+  sentry-ruby (~> 5.12)
   spring
   stimulus-rails
   turbolinks (~> 5)

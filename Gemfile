@@ -72,3 +72,9 @@ gem "rails-i18n", "~> 6.0"
 gem "matrix", "~> 0.4.2"
 
 gem "debug", "~> 1.8"
+
+gem "dockerfile-rails", ">= 1.5", :group => :development
+
+gem "sentry-ruby", "~> 5.12"
+
+gem "sentry-rails", "~> 5.12"
