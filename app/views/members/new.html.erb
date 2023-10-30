@@ -12,16 +12,12 @@
         <%= f.text_field :personal_number, required: true, placeholder: t('member_personal_id_placeholder'), class: "shadow border px-4 py-2 w-full rounded" %>
       </div>
       <div class="flex flex-col mb-6">
-        <%= f.label :email, t('email_label'), class: "block mb-2 font-medium" %>
-        <%= f.email_field :email, placeholder: t('member_email_placeholder'), class: "shadow border px-4 py-2 w-full rounded" %>
-      </div>
-      <div class="flex flex-col mb-6">
         <%= f.label :phone, t('phone_number_label'), class: "block mb-2 font-medium" %>
         <%= f.text_field :phone, placeholder: t('member_phone_placeholder'), class: "shadow border px-4 py-2 w-full rounded" %>
       </div>
       <div class="flex flex-col mb-6">
-        <%= f.label :father_name, t('father_s_name_label'), class: "block mb-2 font-medium" %>
-        <%= f.text_field :father_name, placeholder: t('member_father_s_name_placeholder'), class: "shadow border px-4 py-2 w-full rounded" %>
+        <%= f.label :email, t('email_label'), class: "block mb-2 font-medium" %>
+        <%= f.email_field :email, placeholder: t('member_email_placeholder'), class: "shadow border px-4 py-2 w-full rounded" %>
       </div>
       <div class="flex flex-col mb-6">
         <%= f.label :date_of_birth, t('date_of_birth_label'), class: "block mb-2 font-medium" %>
