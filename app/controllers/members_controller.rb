@@ -16,13 +16,13 @@ class MembersController < ApplicationController
 
   def create
     authorize Member
-    @member = Member.create(member_params)
-    if @member.valid?
+    @member = Member.new(member_params)
+    if @member.save
       flash[:snack_success] = I18n.t('successfully_created_member_name', name: @member.name)
       redirect_to members_path
     else
       flash[:form_errors] = @member.errors.full_messages
-      redirect_to new_member_path
+      render 'new'
     end
   end
 

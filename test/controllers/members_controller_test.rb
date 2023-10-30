@@ -42,4 +42,15 @@ class MembersControllerTest < ActionDispatch::IntegrationTest
       assert_response :redirect
     end
   end
+
+  test 'should throw flash when creating a second member with same mobile number' do
+    log_in_as staffs(:admino)
+    assert_difference 'Member.count' do
+      post members_path, params: { member: { name: 'New Member', personal_number: 1234, phone: '9876543210' } }
+      assert_response :redirect
+    end
+    post members_path, params: { member: { name: 'New member 2', personal_number: 2345, phone: '9876543210' } }
+    assert_not_nil flash[:form_errors]
+    assert_response :success
+  end
 end

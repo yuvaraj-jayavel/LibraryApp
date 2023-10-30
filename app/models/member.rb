@@ -6,7 +6,7 @@ class Member < ApplicationRecord
   validates :name, presence: true
   validates :personal_number, presence: true, uniqueness: true, numericality: { greater_than: 0 }
 
-  validates :phone, length: { allow_blank: true, is: 10 }
+  validates :phone, length: { is: 10 }, uniqueness: true, allow_blank: true
 
   pg_search_scope :search_by_name,
                   against: %i[name],
