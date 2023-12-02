@@ -20,13 +20,13 @@
       <%= button_tag t('reset'), type: :reset, data: { action: 'search-form#reset' }, class: "btn-secondary" %>
     </div>
     <div class="p-3">
-      <%= f.check_box :only_current, {
+      <%= f.check_box :show_all, {
         class: 'mr-1',
         include_hidden: false,
-        checked: params.dig(:only_current) == 'true',
+        checked: params.dig(:show_all) == 'true',
         onchange: ("this.form.submit()")
       }, 'true', 'false' %>
-      <%= f.label :only_current, t('show_only_currently_rented'), class: 'text-gray-700' %>
+      <%= f.label :show_all, t('show_all'), class: 'text-gray-700' %>
     </div>
   <% end %>
 </div>

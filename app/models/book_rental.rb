@@ -33,12 +33,12 @@ class BookRental < ApplicationRecord
     end
   end
 
-  def self.filter_by_only_current(only_current)
-    case only_current
+  def self.filter_by_show_all(show_all)
+    case show_all
     when 'true', true
-      current
-    else
       all
+    else
+      current
     end
   end
 

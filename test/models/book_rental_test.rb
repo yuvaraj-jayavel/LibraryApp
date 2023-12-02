@@ -71,31 +71,31 @@ class BookRentalTest < ActiveSupport::TestCase
     assert_equal BookRental.all, search_results
   end
 
-  test 'filter_by_only_current should return only currently rented out rentals when called with string "true"' do
-    filter_results = BookRental.filter_by_only_current('true')
+  test 'filter_by_show_all should return all rented out rentals when called with string "true"' do
+    filter_results = BookRental.filter_by_show_all('true')
+    assert_equal BookRental.all, filter_results
+  end
+
+  test 'filter_by_show_all should return all rented out rentals when called with boolean true' do
+    filter_results = BookRental.filter_by_show_all(true)
+    assert_equal BookRental.all, filter_results
+  end
+
+  test 'filter_by_show_all should return only current rentals when called with string "false"' do
+    filter_results = BookRental.filter_by_show_all('false')
     assert_equal BookRental.current, filter_results
   end
 
-  test 'filter_by_only_current should return only currently rented out rentals when called with boolean true' do
-    filter_results = BookRental.filter_by_only_current(true)
+  test 'filter_by_show_all should return all rentals when called with boolean true' do
+    filter_results = BookRental.filter_by_show_all(true)
+    assert_equal BookRental.all, filter_results
+  end
+
+  test 'filter_by_show_all should return only current rentals when called with blank values' do
+    filter_results = BookRental.filter_by_show_all(nil)
     assert_equal BookRental.current, filter_results
-  end
 
-  test 'filter_by_only_current should return all rentals when called with string "false"' do
-    filter_results = BookRental.filter_by_only_current('false')
-    assert_equal BookRental.all, filter_results
-  end
-
-  test 'filter_by_only_current should return all rentals when called with boolean false' do
-    filter_results = BookRental.filter_by_only_current(false)
-    assert_equal BookRental.all, filter_results
-  end
-
-  test 'filter_by_only_current should return all rentals when called with blank values' do
-    filter_results = BookRental.filter_by_only_current(nil)
-    assert_equal BookRental.all, filter_results
-
-    filter_results = BookRental.filter_by_only_current('')
-    assert_equal BookRental.all, filter_results
+    filter_results = BookRental.filter_by_show_all('')
+    assert_equal BookRental.current, filter_results
   end
 end

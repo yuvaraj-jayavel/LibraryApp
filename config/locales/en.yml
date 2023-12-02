@@ -15,7 +15,7 @@ en:
   new_book: "New Book"
   book_rentals: "Book Rentals"
   search_by_book_or_member_name: "Search by book or member name"
-  show_only_currently_rented: "Show only currently rented"
+  show_all: "Show all rentals"
   issue_id: "Issue ID"
   book: "Book"
   member: "Member"

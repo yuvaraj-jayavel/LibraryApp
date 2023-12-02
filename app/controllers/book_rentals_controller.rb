@@ -3,7 +3,7 @@ class BookRentalsController < ApplicationController
     authorize BookRental
     @pagy, @book_rentals = pagy(BookRental
                                   .includes(:book, :member)
-                                  .filter_by(book_rental_filter_params.slice(:only_current))
+                                  .filter_by_show_all(book_rental_filter_params[:show_all])
                                   .search(book_rental_filter_params[:search]))
   end
 
@@ -37,6 +37,6 @@ class BookRentalsController < ApplicationController
   def book_rental_filter_params
     params
       .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
-      .permit(:search, :only_current)
+      .permit(:search, :show_all)
   end
 end
