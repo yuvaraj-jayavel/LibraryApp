@@ -19,8 +19,8 @@
           </td>
           <td><%= book_rental.book.id %></td>
           <td><%= book_rental.book.name %></td>
-          <td><%= book_rental.issued_on %></td>
-          <td><%= book_rental.due_by %></td>
+          <td><%= book_rental.issued_on&.to_formatted_s(:long) %></td>
+          <td><%= book_rental.due_by&.to_formatted_s(:long) %></td>
           <td class="pr-4">
             &#8377; <span data-book-rental-return-target="fine"><%= "#{'%.2f' % book_rental.fine(@returning_on)}" %></span>
           </td>
