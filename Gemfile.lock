@@ -120,6 +120,8 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.5)
     minitest (5.20.0)
+    mocha (2.1.0)
+      ruby2_keywords (>= 0.0.5)
     msgpack (1.7.2)
     net-imap (0.3.7)
       date
@@ -223,6 +225,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
     ruby-progressbar (1.13.0)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -300,6 +303,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.3)
   matrix (~> 0.4.2)
+  mocha
   pagy (~> 5.3)
   pg (~> 1.4.6)
   pg_search (~> 2.3)
