@@ -46,10 +46,10 @@
       <tr>
         <td><%= book.id %></td>
         <td><%= book.name %></td>
-        <td><%= book.author.name %></td>
+        <td><%= book.author&.name %></td>
         <td><%= book.publisher&.name %></td>
         <td><%= book.publishing_year %></td>
-        <td><%= book.categories.map { |c| c.name }.join(', ') %></td>
+        <td><%= book.categories&.map { |c| c&.name }.join(', ') %></td>
       </tr>
     <% end %>
     </tbody>
