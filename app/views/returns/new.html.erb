@@ -16,6 +16,7 @@
           data: {
             controller: 'searchable-member-select',
             searchable_member_select_url_value: members_path,
+            searchable_member_select_initial_item_value: params.dig(:member_id),
             action: "returns-form#handleMemberIdChange"
           }
         } %>

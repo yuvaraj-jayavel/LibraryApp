@@ -48,14 +48,14 @@
       <tr>
         <td><%= book_rental.id %></td>
         <td><%= book_rental.borrowed_book %></td>
-        <td><%= book_rental.borrower %></td>
+        <td><%= book_rental.borrower_name_id %></td>
         <td><%= book_rental.issued_on&.to_formatted_s(:long) %></td>
         <td><%= book_rental.due_by&.to_formatted_s(:long) %></td>
         <td>
           <% if book_rental.returned? %>
             <%= book_rental.returned_on&.to_formatted_s(:long) %>
           <% else %>
-            <%= link_to(t('return_verb'), new_return_path, class: 'link-primary') %>
+            <%= link_to(t('return_verb'), new_return_path(member_id: book_rental.member.id), class: 'link-primary') %>
           <% end %>
         </td>
       </tr>

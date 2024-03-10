@@ -10,7 +10,7 @@ export default class extends Controller {
 
   // TODO: DRY this controller. Duplicated from searchable_book_select_controller
   async connect() {
-    const initialOptions = await fetchJson(this.urlValue, { params: { search: this.initialItemValue } }).then(this.transformData);
+    const initialOptions = this.initialItemValue ? await fetchJson(this.urlValue, { params: { search: this.initialItemValue } }).then(this.transformData) : [];
     const initialItem = _.get(initialOptions, '0.id');
     new TomSelect(this.element, {
       valueField: 'id',

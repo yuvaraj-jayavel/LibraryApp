@@ -46,7 +46,7 @@ class BookRental < ApplicationRecord
     end
   end
 
-  def borrower
+  def borrower_name_id
     "#{member.name} ##{member.id}"
   end
 
