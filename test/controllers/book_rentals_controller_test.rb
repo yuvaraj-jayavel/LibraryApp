@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class BookRentalsControllerTest < ActionDispatch::IntegrationTest
   def setup
     log_in_as staffs(:admino)
   end
-  
+
   test 'should get index' do
     get book_rentals_path
     assert_response :success
@@ -44,6 +46,30 @@ class BookRentalsControllerTest < ActionDispatch::IntegrationTest
            params: {
              book_rental: {
                book_id: unavailable_book.id,
+               member_id: member.id,
+               issued_on: Date.today.to_formatted_s
+             }
+           }
+      assert_template 'book_rentals/new'
+      assert_not flash.empty?
+      get root_path
+      assert flash.empty?
+    end
+  end
+
+  test 'should not be able to borrow more than max number of books' do
+    available_book = book_rentals(:returned).book
+    member = members(:johnny)
+    assert member.book_rentals.current.count >= BookRental::MAX_RENTALS
+
+    get new_book_rental_path
+    assert_response :success
+
+    assert_no_difference 'BookRental.count' do
+      post book_rentals_path,
+           params: {
+             book_rental: {
+               book_id: available_book.id,
                member_id: member.id,
                issued_on: Date.today.to_formatted_s
              }

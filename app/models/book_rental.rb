@@ -1,18 +1,16 @@
 class BookRental < ApplicationRecord
   include Filterable
 
-  # for some reason, the default sort does not order by id
-  default_scope { order(id: :asc) }
-
   include PgSearch::Model
 
   DUE_BY_DAYS = 15
   FINE_PER_DAY = 1
+  MAX_RENTALS = 2
 
   belongs_to :book
   belongs_to :member
 
-  validate :book_is_available, on: :create
+  validate :book_is_available, :member_has_only_max_rentals, on: :create
 
   scope :current, -> { where(returned_on: nil) }
 
@@ -25,12 +23,18 @@ class BookRental < ApplicationRecord
                     tsearch: { prefix: true }
                   }
 
-  def self.search(query)
-    if query.present?
-      search_by_name(query)
+  def self.search(query, max_results=nil)
+    if /^\d+$/.match(query.to_s)
+      search_by_id(query).limit(max_results)
+    elsif query.present?
+      search_by_name(query).limit(max_results)
     else
-      all
+      all.limit(max_results)
     end
+  end
+
+  def self.search_by_id(search_id)
+    where(book_id: search_id).or(where(member_id: search_id))
   end
 
   def self.filter_by_show_all(show_all)
@@ -69,6 +73,10 @@ class BookRental < ApplicationRecord
   private
 
   def book_is_available
-    errors.add(:book, 'should be available') unless book.available?
+    errors.add(:base, I18n.t('book_not_available')) unless book.available?
+  end
+
+  def member_has_only_max_rentals
+    errors.add(:member, I18n.t('member_borrowed_max_books')) if member.book_rentals.current.count >= MAX_RENTALS
   end
 end

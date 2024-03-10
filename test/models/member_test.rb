@@ -1,4 +1,6 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class MemberTest < ActiveSupport::TestCase
   def setup
@@ -102,5 +104,33 @@ class MemberTest < ActiveSupport::TestCase
   test 'empty search query should return all members' do
     search_results = Member.search('')
     assert_equal Member.all, search_results
+  end
+
+  test 'members who can rent should be computed' do
+    member = members(:phineas)
+    assert member.book_rentals.current.count <= BookRental::MAX_RENTALS
+    assert_includes Member.can_rent, member
+  end
+
+  test 'members who can rent should includes members with rentals that have been returned' do
+    member = members(:phineas)
+    BookRental.create(member:, returned_on: Time.now, issued_on: Time.now - 1.day, book: books(:five_point_someone))
+    BookRental.create(member:, returned_on: Time.now, issued_on: Time.now - 1.day,
+                      book: books(:unborrowed))
+    assert member.book_rentals.current.count <= BookRental::MAX_RENTALS
+    assert_includes Member.can_rent, member
+  end
+
+  test 'members who can rent should not includes members with more than or equal to max rentals' do
+    member = members(:johnny)
+    assert member.book_rentals.current.count >= BookRental::MAX_RENTALS
+    assert_not_includes Member.can_rent, member
+  end
+
+  test 'members filter_by_can_rent calls the correct scope' do
+    Member.expects(:can_rent).once
+    Member.filter_by_can_rent('true')
+    Member.expects(:all).once
+    Member.filter_by_can_rent('false')
   end
 end

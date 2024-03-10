@@ -84,3 +84,5 @@ ta:
   book_rentals_not_found_for_given_member: "உறுப்பினருக்கு புத்தக விநியோகங்கள் காணப்படவில்லை"
   invalid_username_or_password: "தவறான பயனர்பெயர் அல்லது கடவுச்சொல்!"
   create_book_rental: "புத்தக விநியோகத்தை உருவாக்கு"
+  book_not_available: "புத்தகம்"
+  member_borrowed_max_books: "உறுப்பினர் அதிகபட்ச புத்தகங்களை கடன் வாங்கியுள்ளார்"

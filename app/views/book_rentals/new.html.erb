@@ -22,7 +22,11 @@
           placeholder: t('search_member_by_name_id_or_personal_number'),
           required: true,
           class: "shadow border px-4 py-2 w-full rounded",
-          data: { controller: 'searchable-member-select', searchable_member_select_url_value: members_path }
+          data: {
+            controller: 'searchable-member-select',
+            searchable_member_select_url_value: members_path,
+            searchable_member_select_filter_params_value: { can_rent: true }
+          }
         } %>
       </div>
       <div class="flex flex-col mb-6">

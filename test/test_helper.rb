@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 ENV['RAILS_ENV'] ||= 'test'
+require 'minitest/unit'
+require 'mocha/minitest'
 require_relative '../config/environment'
 require 'rails/test_help'
 

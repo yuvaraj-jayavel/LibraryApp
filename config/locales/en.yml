@@ -84,3 +84,6 @@ en:
   book_rentals_not_found_for_given_member: "Book rentals not found for given member"
   invalid_username_or_password: "Invalid username or password!"
   create_book_rental: "Create Book Rental"
+  book_not_available: "Book not available"
+  member_borrowed_max_books: "Member has already borrowed maximum number of books"
+

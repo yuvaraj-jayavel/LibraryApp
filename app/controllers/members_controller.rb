@@ -1,8 +1,12 @@
 class MembersController < ApplicationController
   def index
     authorize Member
-    @pagy, @members = pagy(Member.search(member_search_params[:search]),
-                           items: member_search_params[:max_results] || Pagy::DEFAULT[:items])
+    @pagy, @members = pagy(
+      Member
+        .filter_by(member_search_params.slice(:can_rent))
+        .search(member_search_params[:search]),
+      items: member_search_params[:max_results] || Pagy::DEFAULT[:items]
+    )
     respond_to do |format|
       format.html
       format.json { render json: @members }
@@ -37,6 +41,6 @@ class MembersController < ApplicationController
   def member_search_params
     params
       .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
-      .permit(:search, :max_results)
+      .permit(:search, :max_results, :can_rent)
   end
 end
