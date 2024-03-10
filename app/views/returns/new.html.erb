@@ -2,6 +2,7 @@
   <div class="w-2/3 flex justify-center"
        data-controller="returns-form"
        data-returns-form-url-value="<%= member_book_rentals_path %>"
+       data-returns-form-initial-member-id-value="<%= params.dig(:member_id) %>"
   >
     <%= form_with(url: returns_path, scope: :return, local: true, class: "flex flex-col w-full bg-white shadow-md border rounded-md p-12") do |f| %>
       <p class="text-4xl font-black mb-4"><%= t('return') %></p>

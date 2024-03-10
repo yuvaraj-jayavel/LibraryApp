@@ -3,10 +3,10 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="returns-form"
 export default class extends Controller {
   static targets = [ 'booksList', 'totalFine' ]
-  static values = { url: String }
+  static values = { url: String, initialMemberId: Number }
 
   initialize() {
-    this.memberId = null
+    this.memberId = this.initialMemberIdValue
     this.returningOn = new Date().toISOString().split('T')[0] // The date part of ISO String (e.g 2021-11-06)
     this.initializeTotalFine()
   }

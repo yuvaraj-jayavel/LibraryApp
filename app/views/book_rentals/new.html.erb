@@ -25,7 +25,8 @@
           data: {
             controller: 'searchable-member-select',
             searchable_member_select_url_value: members_path,
-            searchable_member_select_filter_params_value: { can_rent: true }
+            searchable_member_select_filter_params_value: { can_rent: true },
+            searchable_member_select_initial_item_value: { book_id: params.dig(:member_id) }
           }
         } %>
       </div>
