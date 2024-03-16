@@ -27,11 +27,11 @@
     <thead>
     <tr>
       <th><%= t('activerecord.attributes.member.id') %></th>
+      <th><%= t('activerecord.attributes.member.tamil_name') %></th>
       <th><%= t('activerecord.attributes.member.name') %></th>
       <th><%= t('activerecord.attributes.member.personal_number') %></th>
-      <th><%= t('activerecord.attributes.member.email') %></th>
+      <th><%= t('activerecord.attributes.member.section') %></th>
       <th><%= t('activerecord.attributes.member.phone') %></th>
-      <th><%= t('activerecord.attributes.member.father_name') %></th>
       <th><%= t('activerecord.attributes.member.date_of_birth') %></th>
       <th><%= t('activerecord.attributes.member.date_of_retirement') %></th>
     </tr>
@@ -40,11 +40,11 @@
     <% @members.each do |member| %>
       <tr>
         <td><%= member.id %></td>
+        <td><%= member.tamil_name %></td>
         <td><%= member.name %></td>
         <td><%= member.personal_number %></td>
-        <td><%= member.email %></td>
+        <td><%= member.section %></td>
         <td><%= member.phone %></td>
-        <td><%= member.father_name %></td>
         <td><%= member.date_of_birth&.to_formatted_s(:long) %></td>
         <td><%= member.date_of_retirement&.to_formatted_s(:long) %></td>
       </tr>

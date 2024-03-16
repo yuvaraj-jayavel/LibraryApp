@@ -1,4 +1,6 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class CreateMemberTest < ActionDispatch::IntegrationTest
   def setup
@@ -50,7 +52,7 @@ class CreateMemberTest < ActionDispatch::IntegrationTest
                personal_number: 214,
                email: '',
                phone: '',
-               father_name: '',
+               tamil_name: '',
                date_of_birth: '',
                date_of_retirement: ''
              }
@@ -61,7 +63,7 @@ class CreateMemberTest < ActionDispatch::IntegrationTest
       created_member = Member.find_by(personal_number: 214)
       assert_nil created_member.email
       assert_nil created_member.phone
-      assert_nil created_member.father_name
+      assert_nil created_member.tamil_name
       assert_nil created_member.date_of_birth
       assert_nil created_member.date_of_retirement
     end

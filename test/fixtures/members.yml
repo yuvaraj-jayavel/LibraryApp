@@ -2,7 +2,7 @@
 
 johnny:
   name: Johnny
-  father_name: Bravo
+  tamil_name: Bravo
   personal_number: 1
   date_of_birth: 2000-11-03
   date_of_retirement: 2060-11-04
@@ -11,7 +11,7 @@ johnny:
 
 phineas:
   name: Phineas
-  father_name: Lawrence
+  tamil_name: Lawrence
   personal_number: 2
   date_of_birth: 2003-12-04
   date_of_retirement: 2064-09-23

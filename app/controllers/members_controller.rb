@@ -4,7 +4,8 @@ class MembersController < ApplicationController
     @pagy, @members = pagy(
       Member
         .filter_by(member_search_params.slice(:can_rent))
-        .search(member_search_params[:search]),
+        .search(member_search_params[:search])
+        .order(id: :asc),
       items: member_search_params[:max_results] || Pagy::DEFAULT[:items]
     )
     respond_to do |format|
@@ -35,7 +36,7 @@ class MembersController < ApplicationController
       .require(:member)
       .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
       .reject { |_k, v| v.blank? }
-      .permit(:name, :personal_number, :email, :phone, :father_name, :date_of_birth, :date_of_retirement)
+      .permit(:name, :personal_number, :email, :phone, :tamil_name, :date_of_birth, :date_of_retirement)
   end
 
   def member_search_params

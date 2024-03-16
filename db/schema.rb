@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_28_172137) do
+ActiveRecord::Schema.define(version: 2024_03_16_044957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2023_10_28_172137) do
 
   create_table "members", force: :cascade do |t|
     t.string "name"
-    t.string "father_name"
+    t.string "tamil_name"
     t.integer "personal_number"
     t.date "date_of_birth"
     t.date "date_of_retirement"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2023_10_28_172137) do
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "section"
     t.index ["email"], name: "index_members_on_email", unique: true
     t.index ["personal_number"], name: "index_members_on_personal_number", unique: true
     t.index ["phone"], name: "index_members_on_phone", unique: true
