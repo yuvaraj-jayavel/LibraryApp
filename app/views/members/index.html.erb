@@ -33,7 +33,6 @@
       <th><%= t('activerecord.attributes.member.section') %></th>
       <th><%= t('activerecord.attributes.member.phone') %></th>
       <th><%= t('activerecord.attributes.member.date_of_birth') %></th>
-      <th><%= t('activerecord.attributes.member.date_of_retirement') %></th>
     </tr>
     </thead>
     <tbody>
@@ -46,7 +45,6 @@
         <td><%= member.section %></td>
         <td><%= member.phone %></td>
         <td><%= member.date_of_birth&.to_formatted_s(:long) %></td>
-        <td><%= member.date_of_retirement&.to_formatted_s(:long) %></td>
       </tr>
     <% end %>
     </tbody>
