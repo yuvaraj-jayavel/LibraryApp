@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 class Book < ApplicationRecord
+  # Model Column Definition
+  # t.text "name"
+  # t.integer "publishing_year"
+  # t.bigint "author_id"
+  # t.bigint "publisher_id"
+  # t.datetime "created_at", precision: 6, null: false
+  # t.datetime "updated_at", precision: 6, null: false
+  # t.index ["author_id"], name: "index_books_on_author_id"
+  # t.index ["publisher_id"], name: "index_books_on_publisher_id"
+
   include PgSearch::Model
   include Filterable
 

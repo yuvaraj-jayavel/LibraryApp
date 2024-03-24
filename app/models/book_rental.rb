@@ -1,4 +1,14 @@
 class BookRental < ApplicationRecord
+  # Model Column Definition
+  # t.bigint "book_id", null: false
+  # t.bigint "member_id", null: false
+  # t.date "issued_on", default: -> { "CURRENT_TIMESTAMP" }
+  # t.date "returned_on"
+  # t.datetime "created_at", precision: 6, null: false
+  # t.datetime "updated_at", precision: 6, null: false
+  # t.index ["book_id"], name: "index_book_rentals_on_book_id"
+  # t.index ["member_id"], name: "index_book_rentals_on_member_id"
+
   include Filterable
 
   include PgSearch::Model

@@ -1,4 +1,13 @@
 class Staff < ApplicationRecord
+  # Model Column Definition
+  # t.string "username"
+  # t.string "password_digest"
+  # t.bigint "role_id", null: false
+  # t.datetime "created_at", precision: 6, null: false
+  # t.datetime "updated_at", precision: 6, null: false
+  # t.string "remember_digest"
+  # t.index ["role_id"], name: "index_staffs_on_role_id"
+
   attr_accessor :remember_token
 
   belongs_to :role

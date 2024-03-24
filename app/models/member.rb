@@ -1,4 +1,19 @@
 class Member < ApplicationRecord
+  # Model Column Definition
+  # t.string "name"
+  # t.string "tamil_name"
+  # t.integer "personal_number"
+  # t.date "date_of_birth"
+  # t.date "date_of_retirement"
+  # t.string "email"
+  # t.string "phone"
+  # t.datetime "created_at", precision: 6, null: false
+  # t.datetime "updated_at", precision: 6, null: false
+  # t.string "section"
+  # t.index ["email"], name: "index_members_on_email", unique: true
+  # t.index ["personal_number"], name: "index_members_on_personal_number", unique: true
+  # t.index ["phone"], name: "index_members_on_phone", unique: true
+
   include PgSearch::Model
   include Filterable
 
