@@ -41,6 +41,8 @@ class Staff < ApplicationRecord
   end
 
   def authenticated?(remember_token)
-    BCrypt::Password.new(remember_digest) == remember_token
+    BCrypt::Password.new(remember_digest) == remember_token if remember_digest.present?
+  rescue BCrypt::Errors::InvalidHash
+    false
   end
 end
