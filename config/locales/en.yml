@@ -86,4 +86,4 @@ en:
   create_book_rental: "Create Book Rental"
   book_not_available: "Book not available"
   member_borrowed_max_books: "Member has already borrowed maximum number of books"
-
+  not_authorized: "You are not authorized. Please log in to continue."

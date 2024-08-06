@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
   get 'sessions/new'
-  get ':forbidden', to: 'forbidden#show', as: :forbidden
   resources :books, only: %i[create new index]
   resources :members, only: %i[create new index]
   resources :book_rentals, only: %i[create new index]
