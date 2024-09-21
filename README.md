@@ -13,14 +13,19 @@ Library app written in Rails
 
 - Install [rvm](https://rvm.io) and configure it.
 ```shell
-rvm 3.0.2
+rvm 3.2.2
 rvm gemset create LibraryApp
-rvm 3.0.2@LibraryApp
+rvm 3.2.2@LibraryApp
+```
+
+```shell
+npm install webpack-dev-server -g
 ```
 
 - Install bundler
 ```shell
 gem install bundler
+bundle install
 ```
 
 - Install and configure [PostgreSQL 14](https://www.postgresql.org/download/) for your platform

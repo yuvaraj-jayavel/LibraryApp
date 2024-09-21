@@ -1,4 +1,3 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-rvm use
 foreman start -f Procfile.dev
