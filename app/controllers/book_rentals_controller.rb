@@ -5,7 +5,7 @@ class BookRentalsController < ApplicationController
                                   .includes(:book, :member)
                                   .filter_by_show_all(book_rental_filter_params[:show_all])
                                   .search(book_rental_filter_params[:search])
-                                  .order(issued_on: :asc))
+                                  .order(issued_on: :desc))
   end
 
   def new
