@@ -55,7 +55,7 @@ ta:
   due_by: "நிலுவைத் தேதி"
   book_fine: "அபராதம்"
   no_books_available: "புத்தகங்கள் இல்லை"
-  return_verb: "திரும்பவும்"
+  return_verb: "திருப்பவும்"
   total_fine: "மொத்த அபராதம்"
   username_label: "பயனர் பெயர்"
   password_label: "கடவுச்சொல்"
