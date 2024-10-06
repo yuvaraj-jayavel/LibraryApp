@@ -61,6 +61,10 @@ class BookRental < ApplicationRecord
     "#{member.name} ##{member.id}"
   end
 
+  def borrower_phone
+    member.phone
+  end
+
   def borrowed_book
     "#{book.name} ##{book.id}"
   end

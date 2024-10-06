@@ -38,6 +38,7 @@
         <th><%= t('activerecord.attributes.book_rental.id') %></th>
         <th><%= t('activerecord.models.book') %></th>
         <th><%= t('activerecord.models.member') %></th>
+        <th><%= t('activerecord.attributes.member.phone') %></th>
         <th><%= t('activerecord.attributes.book_rental.issued_on') %></th>
         <th><%= t('activerecord.attributes.book_rental.due_by') %></th>
         <th><%= t('activerecord.attributes.book_rental.returned_on') %></th>
@@ -49,6 +50,7 @@
         <td><%= book_rental.id %></td>
         <td><%= book_rental.borrowed_book %></td>
         <td><%= book_rental.borrower_name_id %></td>
+        <td><%= book_rental.borrower_phone %></td>
         <td><%= book_rental.issued_on&.to_formatted_s(:long) %></td>
         <td><%= book_rental.due_by&.to_formatted_s(:long) %></td>
         <td>
