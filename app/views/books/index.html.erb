@@ -47,6 +47,8 @@
         <td>
           <div class="flex items-center gap-2">
             <span class="h-2 w-2 bg-<%= book.available? ? 'green' : 'red' %>-500 rounded-full"></span>
+            <%# TODO: Fix below hack to make sure tailwind styles for bg green and red are loaded. %>
+            <span class="hidden bg-green-500 bg-red-500"></span>
             <span><%= book.custom_number %></span>
           </div>
         </td>
