@@ -66,7 +66,7 @@ class Book < ApplicationRecord
     if query.present?
       where(id: search_by_custom_number(query).pluck(:id) + search_by_name(query).pluck(:id)).limit(max_results)
     else
-      all.order(custom_number: :asc).limit(max_results)
+      all.limit(max_results)
     end
   end
 
