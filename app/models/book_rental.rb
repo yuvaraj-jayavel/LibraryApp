@@ -43,6 +43,7 @@ class BookRental < ApplicationRecord
     end
   end
 
+  # TODO: This is broken. It should search by custom number. Change after knowing custom_number pattern
   def self.search_by_id(search_id)
     where(book_id: search_id).or(where(member_id: search_id))
   end

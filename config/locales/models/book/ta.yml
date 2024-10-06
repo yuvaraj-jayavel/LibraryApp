@@ -5,6 +5,7 @@ ta:
     attributes:
       book:
         id: "புத்தக எண்"
+        custom_number: "புத்தக எண்"
         name: "பெயர்"
         publishing_year: "வெளியிடப்பட்ட ஆண்டு"
         author_id: "எழுத்தாளர் எண்"

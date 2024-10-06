@@ -34,6 +34,7 @@ ta:
   year: "ஆண்டு"
   categories: "பிரிவுகள்"
   create_book: "புத்தகத்தை உருவாக்கு"
+  book_custom_number_placeholder: "2"
   book_name_placeholder: "பொன்னியின் செல்வன்"
   book_author_placeholder: "கல்கி கிருஷ்ணமூர்த்தி"
   book_publisher_placeholder: "கல்கி"
@@ -87,3 +88,4 @@ ta:
   book_not_available: "புத்தகம்"
   member_borrowed_max_books: "உறுப்பினர் அதிகபட்ச புத்தகங்களை கடன் வாங்கியுள்ளார்"
   not_authorized: "நீங்கள் அங்கீகரிக்கப்படவில்லை. செயல்பாடுகளைத் தொடர உள்நுழையவும்."
+  custom_number: "எண்"

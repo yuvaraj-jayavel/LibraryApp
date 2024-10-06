@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_03_16_044957) do
+ActiveRecord::Schema.define(version: 2024_10_06_162214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,7 +48,9 @@ ActiveRecord::Schema.define(version: 2024_03_16_044957) do
     t.bigint "publisher_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "custom_number"
     t.index ["author_id"], name: "index_books_on_author_id"
+    t.index ["custom_number"], name: "index_books_on_custom_number", unique: true
     t.index ["publisher_id"], name: "index_books_on_publisher_id"
   end
 
@@ -69,6 +71,8 @@ ActiveRecord::Schema.define(version: 2024_03_16_044957) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "section"
+    t.string "custom_number"
+    t.index ["custom_number"], name: "index_members_on_custom_number", unique: true
     t.index ["email"], name: "index_members_on_email", unique: true
     t.index ["personal_number"], name: "index_members_on_personal_number", unique: true
     t.index ["phone"], name: "index_members_on_phone", unique: true

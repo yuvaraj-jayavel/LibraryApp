@@ -36,7 +36,7 @@ class BooksController < ApplicationController
     params
       .require(:book)
       .transform_values { |x| x.strip.gsub(/\s+/, ' ') if x.respond_to?('strip') }
-      .permit(:name, :author_name, :publisher_name, :publishing_year, :category_names)
+      .permit(:custom_number, :name, :author_name, :publisher_name, :publishing_year, :category_names)
   end
 
   def book_search_params

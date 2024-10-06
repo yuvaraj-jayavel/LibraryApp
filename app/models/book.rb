@@ -22,6 +22,9 @@ class Book < ApplicationRecord
 
   attr_accessor :category_names
 
+  validates :custom_number, uniqueness: true
+  # TODO: Uncomment after migrating production data and writing seeds
+  # validates :custom_number, presence: true
   validates :name, presence: true
   validates :publishing_year, numericality: { allow_nil: true, less_than_or_equal_to: Time.now.year }
 
@@ -54,15 +57,14 @@ class Book < ApplicationRecord
     end
   end
 
-  def self.search_by_id(search_id)
-    where(id: search_id)
+  def self.search_by_custom_number(custom_number)
+    where(custom_number:)
   end
 
   def self.search(query, max_results=nil)
-    if /^\d+$/.match(query.to_s)
-      search_by_id(query).limit(max_results)
-    elsif query.present?
-      search_by_name(query).limit(max_results)
+    # TODO: Optimize this when you know the custom number pattern
+    if query.present?
+      where(id: search_by_custom_number(query).pluck(:id) + search_by_name(query).pluck(:id)).limit(max_results)
     else
       all.limit(max_results)
     end
@@ -75,7 +77,7 @@ class Book < ApplicationRecord
       categories = hash[:category_names]&.split(',')&.map do |category_name|
         Category.find_or_create_by(name: category_name.strip)
       end || []
-      @new_book = Book.create(name: hash[:name], author: author, publisher: publisher,
+      @new_book = Book.create(custom_number: hash[:custom_number], name: hash[:name], author: author, publisher: publisher,
                               publishing_year: hash[:publishing_year], categories: categories)
       raise ActiveRecord::Rollback if @new_book.invalid?
 

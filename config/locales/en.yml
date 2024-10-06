@@ -34,6 +34,7 @@ en:
   year: "Year"
   categories: "Categories"
   create_book: "Create Book"
+  book_custom_number_placeholder: "2"
   book_name_placeholder: "Animal Farm"
   book_author_placeholder: "George Orwell"
   book_publisher_placeholder: "Secker and Warburg"
@@ -87,3 +88,4 @@ en:
   book_not_available: "Book not available"
   member_borrowed_max_books: "Member has already borrowed maximum number of books"
   not_authorized: "You are not authorized. Please log in to continue."
+  custom_number: "Number"

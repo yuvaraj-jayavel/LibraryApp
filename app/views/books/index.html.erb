@@ -33,7 +33,7 @@
   <table class="index-table">
     <thead>
     <tr>
-      <th><%= t('activerecord.attributes.book.id') %></th>
+      <th><%= t('custom_number') %></th>
       <th><%= t('activerecord.attributes.book.name') %></th>
       <th><%= t('activerecord.models.author') %></th>
       <th><%= t('activerecord.models.publisher') %></th>
@@ -47,7 +47,7 @@
         <td>
           <div class="flex items-center gap-2">
             <span class="h-2 w-2 bg-<%= book.available? ? 'green' : 'red' %>-500 rounded-full"></span>
-            <span><%= book.id %></span>
+            <span><%= book.custom_number %></span>
           </div>
         </td>
         <td><%= book.name %></td>
