@@ -5,12 +5,10 @@
       <span class="page p-2 prev font-semibold rounded-md"><%== link.call(pagy.prev, pagy_t('pagy.nav.prev'), 'aria-label="previous"') %></span>
     <% else -%>  <span class="page p-2 font-semibold prev disabled text-gray-400 rounded-md"><%== pagy_t('pagy.nav.prev') %></span>
     <% end -%>
-    <% pagy.series.each do |item|
-      # series example: [1, :gap, 7, 8, "9", 10, 11, :gap, 36]  -%>
-      <% if item.is_a?(Integer) -%>  <span class="page py-2 px-3 font-semibold hover:border hover:border-blue-500 rounded-md"><%== link.call(item) %></span>
-      <% elsif item.is_a?(String) -%>  <span class="page p-2 px-3 font-bold bg-blue-500 text-white current rounded-md"><%= item %></span>
-      <% elsif item == :gap -%>  <span class="page p-2 px-3 font-semibold gap rounded-md"><%== pagy_t('pagy.nav.gap') %></span>
-      <% end -%>
+    <%= select :pagy, :page, nil, {}, class: 'border px-4 py-2 bg-gray-50 rounded', data: { controller: "pagination", action: "change->pagination#navigateToPage" } do %>
+      <% (1..pagy.last).each do |i| %>
+        <%= content_tag(:option, i, value: i, selected: i == pagy.page, data: { url: pagy_url_for(pagy, i) }) %>
+      <% end %>
     <% end -%>
     <% if pagy.next -%>
       <span class="page p-2 font-semibold next rounded-md hover:border hover:border-blue-500"><%== link.call(pagy.next, pagy_t('pagy.nav.next'), 'aria-label="next"') %></span>

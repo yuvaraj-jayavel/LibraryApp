@@ -7,12 +7,14 @@ services:
       - "5432:5432" 
     environment:
       - POSTGRES_PASSWORD=postgres
-  web:
+  app:
     build:
       context: .
       dockerfile: Dockerfile.dev
     volumes:
       - .:/rails
+      - ~/.ssh:/home/rails/.ssh
+      - ~/.gitconfig:/home/rails/.gitconfig
     ports:
       - "3000:3000"
     depends_on:

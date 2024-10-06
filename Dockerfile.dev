@@ -20,20 +20,31 @@ RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz
     npm install -g yarn@$YARN_VERSION && \
     rm -rf /tmp/node-build-master
 
+# Setup bundle PATH
+RUN mkdir /bundle && chmod -R ugo+rwt /bundle
+VOLUME /bundle
+ENV BUNDLE_PATH='/bundle'
+ENV PATH="${BUNDLE_PATH}/ruby/${RUBY_VERSION}/bin:$PATH"
+
 # Install application gems
 COPY --link Gemfile Gemfile.lock ./
-RUN bundle install && \
-    bundle exec bootsnap precompile --gemfile && \
-    rm -rf ~/.bundle/ $BUNDLE_PATH/ruby/*/cache $BUNDLE_PATH/ruby/*/bundler/gems/*/.git
-RUN gem install foreman
+RUN bundle install
+
+# Copy application code
+COPY . .
 
 # Install node modules
 COPY --link .yarnrc package.json yarn.lock ./
 COPY --link .yarn/releases/* .yarn/releases/
 RUN yarn install --frozen-lockfile
 
+RUN useradd rails --create-home --shell /bin/bash && \
+    chown -R rails:rails db log storage tmp /bundle
+
+USER rails
+#
 # Entrypoint prepares the database.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 ENV LOCALE=ta
-CMD ["rails", "server", "-b", "0.0.0.0"]
+EXPOSE 3000
