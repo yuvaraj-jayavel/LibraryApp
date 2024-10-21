@@ -3,7 +3,7 @@
 class ApplicationController < ActionController::Base
   include Pagy::Backend
   include SessionsHelper
-  include Pundit
+  include Pundit::Authorization
 
   before_action do
     I18n.locale = ENV['LOCALE']
