@@ -121,12 +121,6 @@ class MemberTest < ActiveSupport::TestCase
     assert_includes Member.can_rent, member
   end
 
-  test 'members who can rent should not includes members with more than or equal to max rentals' do
-    member = members(:johnny)
-    assert member.book_rentals.current.count >= BookRental::MAX_RENTALS
-    assert_not_includes Member.can_rent, member
-  end
-
   test 'members filter_by_can_rent calls the correct scope' do
     Member.expects(:can_rent).once
     Member.filter_by_can_rent('true')

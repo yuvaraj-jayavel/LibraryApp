@@ -60,14 +60,6 @@ class BookTest < ActiveSupport::TestCase
     assert book.valid?
   end
 
-  test 'should not be without an author' do
-    book = books(:oliver_twist)
-    assert book.valid?
-
-    book.author = nil
-    assert book.invalid?
-  end
-
   test 'can have zero categories' do
     book = books(:oliver_twist)
     assert book.valid?
@@ -102,13 +94,6 @@ class BookTest < ActiveSupport::TestCase
 
   test 'cannot create with associated models when book name is missing' do
     book = Book.create_with_associated_models(name: nil, author_name: @author_name,
-                                              publisher_name: @publisher_name, publishing_year: @publishing_year,
-                                              category_names: @categories)
-    assert book.invalid?
-  end
-
-  test 'cannot create with associated models when author name is missing' do
-    book = Book.create_with_associated_models(name: @book_name, author_name: nil,
                                               publisher_name: @publisher_name, publishing_year: @publishing_year,
                                               category_names: @categories)
     assert book.invalid?

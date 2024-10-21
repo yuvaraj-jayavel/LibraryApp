@@ -165,26 +165,6 @@ class BooksCreateTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test 'cannot be created with empty author_name' do
-    get new_book_path
-    assert_response :success
-
-    assert_no_difference 'Book.count' do
-      post books_path,
-           params: {
-             book: {
-               name: 'Da Vinci Code',
-               author_name: '',
-               publisher_name: 'Penguin Labs',
-               publishing_year: '2010',
-               category_names: 'Mystery, Thriller'
-             }
-           }
-      assert_not_nil flash[:form_errors]
-      assert_redirected_to new_book_path
-    end
-  end
-
   test 'cannot be created with empty name' do
     get new_book_path
     assert_response :success

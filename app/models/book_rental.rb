@@ -15,8 +15,8 @@ class BookRental < ApplicationRecord
 
   DUE_BY_DAYS = 15
   FINE_PER_DAY = 1
-  MAX_RENTALS = 2
 
+  MAX_RENTALS = 10
   belongs_to :book
   belongs_to :member
 
@@ -69,7 +69,7 @@ class BookRental < ApplicationRecord
   end
 
   def due_by
-    issued_on + DUE_BY_DAYS.days
+    (issued_on || 1.day.ago) + DUE_BY_DAYS.days
   end
 
   def fine(returned_on = Date.today)

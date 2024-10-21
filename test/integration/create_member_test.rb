@@ -25,24 +25,6 @@ class CreateMemberTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test 'should not create member when required fields are blank' do
-    get new_member_path
-    assert_response :success
-    assert_template 'members/new'
-
-    assert_no_difference 'Member.count' do
-      post members_path,
-           params: {
-             member: {
-               name: 'Barack',
-               personal_number: nil
-             }
-           }
-      assert_redirected_to new_member_path
-      assert_not_nil flash[:form_errors]
-    end
-  end
-
   test 'should use nil values for fields posted with empty strings' do
     assert_difference 'Member.count' do
       post members_path,

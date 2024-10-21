@@ -5,8 +5,6 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include Pundit
 
-  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
-
   before_action do
     I18n.locale = ENV['LOCALE']
     @pagy_locale = ENV['LOCALE']
