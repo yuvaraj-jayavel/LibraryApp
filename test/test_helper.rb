@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'simplecov'
+SimpleCov.start 'rails'
+puts "required simplecov"
 ENV['RAILS_ENV'] ||= 'test'
 require 'minitest/unit'
 require 'mocha/minitest'

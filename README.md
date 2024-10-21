@@ -18,5 +18,9 @@ docker compose -f docker-compose.dev.yml up -d
 - The app should have started in localhost:3000
 - To run tests
 ```
-docker compose -f docker-compose.dev.yml exec rails t
+docker compose -f docker-compose.dev.yml exec web rails t
+```
+- To access the container shell,
+```
+docker compose -f docker-compose.dev.yml exec web bash
 ```
