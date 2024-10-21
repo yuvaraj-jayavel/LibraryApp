@@ -55,6 +55,8 @@ group :test do
   gem 'webdrivers'
   gem 'rails-controller-testing'
   gem 'simplecov', require: false
+  gem 'simplecov-rcov', require: false
+  gem 'simplecov-csv', require: false
 end
 
 gem 'pg', '~> 1.4.6'

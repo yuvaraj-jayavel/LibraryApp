@@ -122,6 +122,7 @@ class MemberTest < ActiveSupport::TestCase
   end
 
   test 'members filter_by_can_rent calls the correct scope' do
+    puts "running this"
     Member.expects(:can_rent).once
     Member.filter_by_can_rent('true')
     Member.expects(:all).once

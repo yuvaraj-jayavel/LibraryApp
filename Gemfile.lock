@@ -252,7 +252,11 @@ GEM
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
+    simplecov-csv (0.1.3)
+      simplecov
     simplecov-html (0.13.1)
+    simplecov-rcov (0.3.7)
+      simplecov (>= 0.4.1)
     simplecov_json_formatter (0.1.4)
     spring (4.1.1)
     sprockets (4.2.1)
@@ -327,6 +331,8 @@ DEPENDENCIES
   sentry-rails (~> 5.12)
   sentry-ruby (~> 5.12)
   simplecov
+  simplecov-csv
+  simplecov-rcov
   spring
   stimulus-rails
   turbolinks (~> 5)
