@@ -18,6 +18,7 @@ class Member < ApplicationRecord
   include Filterable
 
   has_many :book_rentals
+  has_many :private_number
 
   validates :name, presence: true
   validates :personal_number, presence: true, uniqueness: true, numericality: { greater_than: 0 }
@@ -40,6 +41,7 @@ class Member < ApplicationRecord
   end
 
   def self.filter_by_can_rent(filter_can_rent = false)
+    puts "Inside method"
     case filter_can_rent
     when 'true', true
       can_rent
@@ -56,5 +58,20 @@ class Member < ApplicationRecord
     else
       all.limit(max_results)
     end
+  end
+  def new_mentor_requests_count
+    if received_mentor_requests.loaded?
+      received_mentor_requests.count(&:active?)
+    else
+      received_mentor_requests.active.count
+    end
+  end
+
+  def valid_personal_number?
+    personal_number.count > 10 
+  end
+
+  def valid_private_number?
+    private_number.count > 10 
   end
 end

@@ -1,0 +1,2265 @@
+_fixture:
+  model_class: AbstractProgram
+org_primary:
+  id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:48.000000000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2024-08-18 03:24:48.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:24:48.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:24:48.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: 
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Organization
+  parent_id: 
+  root: 
+  programs_count: 6
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: org_primary_account
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 0
+org_anna_univ:
+  id: 2
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:52.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:52.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:24:52.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:24:52.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: 
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Organization
+  parent_id: 
+  root: 
+  programs_count: 3
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: org_anna_univ_account
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 0
+org_foster:
+  id: 3
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:55.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:55.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:24:55.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:24:55.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: 
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Organization
+  parent_id: 
+  root: 
+  programs_count: 1
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: org_foster_account
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 0
+org_custom_domain:
+  id: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:58.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:58.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:24:58.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:24:58.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: 
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Organization
+  parent_id: 
+  root: 
+  programs_count: 1
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: org_custom_domain_account
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 0
+org_no_subdomain:
+  id: 5
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:25:01.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:25:01.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:01.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:01.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: 
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Organization
+  parent_id: 
+  root: 
+  programs_count: 1
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: org_no_subdomain_account
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 0
+albers:
+  id: 6
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:48.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:48.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:04.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:04.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: false
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 0
+  footer_code: 
+  type: Program
+  parent_id: 1
+  root: albers
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: true
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 15
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 1
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+ceg:
+  id: 7
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:52.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:52.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:12.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:12.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: false
+  mentoring_period: 7889238
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 0
+  footer_code: 
+  type: Program
+  parent_id: 2
+  root: ceg
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: true
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 15
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 1
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+nwen:
+  id: 8
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:48.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:48.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:17.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:17.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: false
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 0
+  footer_code: 
+  type: Program
+  parent_id: 1
+  root: nwen
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 15
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 2
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+moderated_program:
+  id: 9
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:48.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:48.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:22.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:22.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: false
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 0
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 1
+  footer_code: 
+  type: Program
+  parent_id: 1
+  root: modprog
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 3
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+psg:
+  id: 10
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:52.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:52.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:27.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:27.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 0
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 1
+  footer_code: 
+  type: Program
+  parent_id: 2
+  root: psg
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 2
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+foster:
+  id: 11
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:55.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:55.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:32.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:32.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 1
+  default_max_connections_limit: 5
+  min_preferred_mentors: 0
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 1
+  footer_code: 
+  type: Program
+  parent_id: 3
+  root: main
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 1
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+no_mentor_request_program:
+  id: 12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:48.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:48.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:37.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:37.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Program
+  parent_id: 1
+  root: nomreqpro
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 4
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+custom_domain:
+  id: 13
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:58.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:58.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:42.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:42.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Program
+  parent_id: 4
+  root: main
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 1
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+cit:
+  id: 14
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:52.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:52.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:47.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:47.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 0
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 1
+  footer_code: 
+  type: Program
+  parent_id: 2
+  root: cit
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 3
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+no_subdomain:
+  id: 15
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:25:01.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:25:01.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:51.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:51.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 0
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 1
+  footer_code: 
+  type: Program
+  parent_id: 5
+  root: main
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 1
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+pbe:
+  id: 16
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:48.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:48.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:25:56.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:25:56.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Program
+  parent_id: 1
+  root: pbe
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 2
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 5
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+org_nch:
+  id: 17
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:26:36.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:26:36.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:36.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:36.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: 
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Organization
+  parent_id: 
+  root: 
+  programs_count: 3
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: org_nch_account
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 0
+nch_mentoring:
+  id: 18
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:26:36.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:26:36.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:39.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:39.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: false
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 0
+  footer_code: 
+  type: Program
+  parent_id: 17
+  root: main
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 3
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 15
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 1
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 0
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+primary_portal:
+  id: 19
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:26:36.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:26:36.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:44.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:44.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: 
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: CareerDev::Portal
+  parent_id: 17
+  root: portal
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: career_dev
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: -1
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+nch_portal:
+  id: 20
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:26:36.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:26:36.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:45.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:45.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: 
+  mentoring_period: 15552000
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: CareerDev::Portal
+  parent_id: 17
+  root: career
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: career_dev
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: -1
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+org_standalone_erg:
+  id: 21
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:26:55.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:26:55.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:56.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:56.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: 
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Organization
+  parent_id: 
+  root: 
+  programs_count: 1
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: org_standalone_erg_account
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 0
+org_ergs:
+  id: 22
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:26:59.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:26:59.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:59.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:59.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: 
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 2
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Organization
+  parent_id: 
+  root: 
+  programs_count: 2
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: false
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: org_ergs_account
+  allow_private_journals: true
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 
+  allow_non_match_connection: false
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: 
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 0
+standalone_erg:
+  id: 23
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:26:55.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:26:55.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:27:02.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:27:02.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Erg
+  parent_id: 21
+  root: veterans
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: true
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: false
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 2
+  allow_non_match_connection: true
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: erg
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 1
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+black_erg:
+  id: 24
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:26:59.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:26:59.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:27:07.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:27:07.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Erg
+  parent_id: 22
+  root: black
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: true
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: false
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 2
+  allow_non_match_connection: true
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: erg
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 1
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+women_erg:
+  id: 25
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:26:59.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:26:59.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:27:12.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:27:12.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Erg
+  parent_id: 22
+  root: women
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: true
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: false
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 2
+  allow_non_match_connection: true
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: erg
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 2
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 
+parents_erg:
+  id: 26
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-08-18 03:24:48.000000000 Z
+    zone: *1
+    time: 2024-08-18 03:24:48.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:27:17.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:27:17.000000000 Z
+  user_id: 
+  allow_one_to_many_mentoring: true
+  mentoring_period: 
+  analytics_script: 
+  sort_users_by: 0
+  default_max_connections_limit: 5
+  min_preferred_mentors: 3
+  max_connections_for_mentee: 
+  theme_id: 
+  allow_mentoring_requests: true
+  inactivity_tracking_period: 2592000
+  mentor_request_style: 2
+  footer_code: 
+  type: Erg
+  parent_id: 1
+  root: parents-erg
+  programs_count: 
+  logout_path: 
+  mentor_offer_needs_acceptance: true
+  subscription_type: 1
+  allow_users_to_leave_connection: true
+  allow_to_change_connection_expiry_date: false
+  allow_mentee_withdraw_mentor_request: false
+  published: true
+  max_pending_requests_for_mentee: 
+  fluid_layout: false
+  account_name: 
+  allow_private_journals: false
+  allow_connection_feedback: true
+  allow_preference_mentor_request: true
+  show_multiple_role_option: false
+  can_update_root: false
+  email_from_address: 
+  allow_users_to_mark_connection_public: false
+  engagement_type: 2
+  allow_non_match_connection: true
+  connection_limit_permission: 3
+  hybrid_templates_enabled: false
+  program_type: erg
+  number_of_licenses: 
+  needs_meeting_request_reminder: false
+  meeting_request_reminder_duration: 3
+  needs_mentoring_request_reminder: false
+  mentoring_request_reminder_duration: 3
+  programs_listing_visibility: 0
+  mentor_request_expiration_days: 
+  needs_project_request_reminder: false
+  project_request_reminder_duration: 3
+  show_text_type_answers_per_reviewer_category: true
+  position: 6
+  meeting_request_auto_expiration_days: 
+  auto_terminate_reason_id: 
+  allow_mentoring_mode_change: 0
+  admin_access_to_mentoring_area: 0
+  creation_way: 
+  email_theme_override: 
+  white_label: false
+  rollout_enabled: false
+  allow_user_to_send_message_outside_mentoring_area: true
+  audit_user_communication: false
+  allow_track_admins_to_access_all_users: false
+  allow_end_users_to_see_match_scores: true
+  circle_request_auto_expiration_days: 
+  include_surveys_for_satisfaction_rate: 
+  allow_project_level_join_directly: false
+  state: 1
+  archived_at: 
+  created_by: 
+  default_time_zone: 
+  favicon_file_name: 
+  max_pending_requests_for_mentor: 5
+  notify_only_tnc_accepted_members: false
+  mandate_circle_start_date: true
+  out_of_office_members_setting: true
+  track_meeting_attendance: false
+  anonymous_matching: false
+  industry: 

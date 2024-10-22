@@ -1,0 +1,183 @@
+_fixture:
+  model_class: ProgramLanguage
+program_languages_1:
+  id: 1
+  organization_language_id: 1
+  program_id: 6
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+program_languages_2:
+  id: 2
+  organization_language_id: 1
+  program_id: 9
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+program_languages_3:
+  id: 3
+  organization_language_id: 1
+  program_id: 12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+program_languages_4:
+  id: 4
+  organization_language_id: 1
+  program_id: 8
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+program_languages_5:
+  id: 5
+  organization_language_id: 1
+  program_id: 16
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+program_languages_6:
+  id: 6
+  organization_language_id: 2
+  program_id: 6
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+program_languages_7:
+  id: 7
+  organization_language_id: 2
+  program_id: 9
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+program_languages_8:
+  id: 8
+  organization_language_id: 2
+  program_id: 12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+program_languages_9:
+  id: 9
+  organization_language_id: 2
+  program_id: 8
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+program_languages_10:
+  id: 10
+  organization_language_id: 2
+  program_id: 16
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+program_languages_11:
+  id: 11
+  organization_language_id: 3
+  program_id: 20
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:53.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:53.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:53.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:53.000000000 Z
+program_languages_12:
+  id: 12
+  organization_language_id: 3
+  program_id: 19
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:53.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:53.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:53.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:53.000000000 Z
+program_languages_13:
+  id: 13
+  organization_language_id: 3
+  program_id: 18
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:53.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:53.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:53.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:53.000000000 Z
+program_languages_14:
+  id: 14
+  organization_language_id: 1
+  program_id: 26
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:27:30.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:27:30.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:27:30.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:27:30.000000000 Z
+program_languages_15:
+  id: 15
+  organization_language_id: 2
+  program_id: 26
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:27:30.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:27:30.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:27:30.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:27:30.000000000 Z

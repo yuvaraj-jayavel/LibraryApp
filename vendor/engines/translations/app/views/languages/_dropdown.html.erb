@@ -1,0 +1,26 @@
+<% if available_languages.size > 1 %>
+  <% current_language = available_languages[0] %>
+  <% other_languages = available_languages[1..-1] %>
+  <% display_text = truncate_html(current_language[:title_for_display], { max_length: local_assigns[:mobile_org_page] ? MobileV2Constants::LANGUAGE_TEXT_SIZE : LANGUAGE_TEXT_SIZE } ) %>
+  <% content_tag_method = get_content_tag_method(hidden_on_mobile: local_assigns[:container_hidden_on_mobile]) %>
+
+  <%= send(content_tag_method, :li, class: "#{local_assigns[:mobile_org_page] ? 'mobile_dropdown' : 'dropdown'} #{local_assigns[:container_class]}") do %>
+    <% icon_content = get_icon_content(local_assigns[:iconclass]) %>
+    <% link_text = icon_content + display_text %>
+    <% link_text = link_text + content_tag(:span, "", class: local_assigns[:caret_class]) if local_assigns[:caret_class] %>
+    <% toggle_class = local_assigns[:ui_pattern] ? "collapse" : "dropdown" %>
+    <%= link_to link_text, "javascript:void(0)", class: "dropdown-toggle no-waves #{local_assigns[:additional_dropdown_class]} #{"cui-hide-dropdown-caret" if local_assigns[:caret_class]}", data: { toggle: toggle_class, display: "static", trackable: true, label_for_tracking: ChrTrackData::Events::Navigation::CLICK_LANGUAGE_OPTIONS, menu_type: ChrTrackData::Source::MenuType::HEADER_NAVIGATION, expandable: true,  tracking_options: { current_language: display_text } }, title: h(current_language[:tooltip]) %>
+    <%= content_tag(:ul, class: "#{local_assigns[:ui_pattern] || "dropdown-menu dropdown-menu-right"} animated fadeIn left-auto") do %>
+      <% other_languages.each do |language| %>
+        <%= content_tag(:li, class: "#{"dropdown-item" if toggle_class == "dropdown"}") do %>
+          <% link_title = h(language[:title_for_display]) %>
+          <% language_selection_redirect_path = @language_selection_redirect_path.nil? ? get_language_selection_redirect_path : @language_selection_redirect_path %>
+          <% options = { locale: language[:language_name], redirect_to: language_selection_redirect_path } %>
+          <% link_url = local_assigns[:mobile_org_page] ? set_current_non_org_languages_path(options) : set_current_languages_path(options) %>
+          <% link_options = { method: :patch, title: link_title, data: { trackable: true, label_for_tracking: ChrTrackData::Events::Navigation::CLICK_LANGUAGE_CHANGED, menu_type: ChrTrackData::Source::MenuType::HEADER_NAVIGATION, tracking_options: { language_changed: link_title }}} %>
+          <%= link_to(link_title, link_url, link_options) %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

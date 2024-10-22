@@ -1,0 +1,31 @@
+_fixture:
+  model_class: Language
+hindi:
+  id: 1
+  title: Hindi
+  display_title: Hindilu
+  language_name: de
+  enabled: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+telugu:
+  id: 2
+  title: Telugu
+  display_title: Telugulu
+  language_name: es
+  enabled: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z

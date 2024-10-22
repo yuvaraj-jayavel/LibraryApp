@@ -1,0 +1,19 @@
+<%= simple_form_for @language, :html => {:class => "flat-form"} do |f| %>
+
+  <%= f.input :title, :wrapper => :horizontal_input, :input_html => {:class => "form-control"} %>
+  <%= f.input :display_title, :wrapper => :horizontal_input, :input_html => {:class => "form-control"} %>
+  <%= f.input :language_name, :wrapper => :horizontal_input, :input_html => {:class => "form-control"} %>
+  <%= control_group(class: "row") do %>
+  		<div class="col-form-label col-sm-3">
+      	<%= f.label 'display_string.Enabled'.translate %>
+    	</div>
+      <%= controls(class: "col-sm-9") do %>
+        <%= (f.input :enabled, label: false, inline_label: "display_string.Yes".translate, :wrapper_html => {:class => " m-t-xs"}, :label_html => {:class => "checkbox no-padding"}, :input_wrapper_html => {:class => "float-left"}) %>
+     <% end %>
+	<% end %>
+
+  <% action_set(:fields_required => true, :class => "float-right") do%>
+  	<%= cancel_link @language %>
+    <%= f.button :submit, @language.new_record? ? "display_string.Create".translate : "display_string.Save".translate %>
+  <% end %>
+<% end %>

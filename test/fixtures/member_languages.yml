@@ -1,0 +1,27 @@
+_fixture:
+  model_class: MemberLanguage
+hindi_member:
+  id: 1
+  member_id: 38
+  language_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+telugu_member:
+  id: 2
+  member_id: 39
+  language_id: 2
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-10-17 03:26:28.000000000 Z
+    zone: *1
+    time: 2024-10-17 03:26:28.000000000 Z
