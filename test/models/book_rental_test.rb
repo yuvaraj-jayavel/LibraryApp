@@ -1,7 +1,7 @@
 require "test_helper"
 
 class BookRentalTest < ActiveSupport::TestCase
-  test 'due_by should be equal to DUE_BY_DAYS + issued_on date' do
+  def test_due_by_should_be_equal_to_DUE_BY_DAYS_issued_on_date
     issued_on = Date.today
     book_rental = BookRental.new(
       book: books(:unborrowed),
@@ -12,12 +12,12 @@ class BookRentalTest < ActiveSupport::TestCase
     assert_equal issued_on + BookRental::DUE_BY_DAYS, book_rental.due_by
   end
 
-  test 'fine should be zero if the book has already been returned' do
+  def test_fine_should_be_zero_if_the_book_has_already_been_returned
     book_rental = book_rentals(:returned)
     assert_equal 0, book_rental.fine
   end
 
-  test 'fine should be zero if due_by is today or in future' do
+  def test_fine_should_be_zero_if_due_by_is_today_or_in_future
     book_rental = BookRental.new(
       book: books(:unborrowed),
       member: members(:johnny),
@@ -31,7 +31,7 @@ class BookRentalTest < ActiveSupport::TestCase
     assert_equal 0, book_rental.fine
   end
 
-  test 'fine should be equal to (returning_on - due_by) multiplied by FINE_PER_DAY' do
+  def test_fine_should_be_equal_to_returning_on_due_by_multiplied_by_FINE_PER_DAY
     returning_on = 2.days.ago.to_date
     days_elapsed_after_due_by = 5
     # e.g. issued_on = Today - (15 + 5)
@@ -46,52 +46,52 @@ class BookRentalTest < ActiveSupport::TestCase
     assert book_rental.fine.instance_of? Float
   end
 
-  test 'search should match book rental by book name' do
+  def test_search_should_match_book_rental_by_book_name
     book_rental = book_rentals(:unreturned)
     assert_includes BookRental.search(book_rental.book.name), book_rental
   end
 
-  test 'search should match book rental by partial book name' do
+  def test_search_should_match_book_rental_by_partial_book_name
     book_rental = book_rentals(:unreturned)
     assert_includes BookRental.search(book_rental.book.name[..-2]), book_rental
   end
 
-  test 'search should match book rental by member name' do
+  def test_search_should_match_book_rental_by_member_name
     book_rental = book_rentals(:unreturned)
     assert_includes BookRental.search(book_rental.member.name), book_rental
   end
 
-  test 'search should match book rental by partial member name' do
+  def test_search_should_match_book_rental_by_partial_member_name
     book_rental = book_rentals(:unreturned)
     assert_includes BookRental.search(book_rental.member.name[..-2]), book_rental
   end
 
-  test 'empty search query should return all book rentals' do
+  def test_empty_search_query_should_return_all_book_rentals
     search_results = BookRental.search('')
     assert_equal BookRental.all, search_results
   end
 
-  test 'filter_by_show_all should return all rented out rentals when called with string "true"' do
+  def test_filter_by_show_all_should_return_all_rented_out_rentals_when_called_with_string_true
     filter_results = BookRental.filter_by_show_all('true')
     assert_equal BookRental.all, filter_results
   end
 
-  test 'filter_by_show_all should return all rented out rentals when called with boolean true' do
+  def test_filter_by_show_all_should_return_all_rented_out_rentals_when_called_with_boolean_true
     filter_results = BookRental.filter_by_show_all(true)
     assert_equal BookRental.all, filter_results
   end
 
-  test 'filter_by_show_all should return only current rentals when called with string "false"' do
+  def test_filter_by_show_all_should_return_only_current_rentals_when_called_with_string_false
     filter_results = BookRental.filter_by_show_all('false')
     assert_equal BookRental.current, filter_results
   end
 
-  test 'filter_by_show_all should return all rentals when called with boolean true' do
+  def test_filter_by_show_all_should_return_all_rentals_when_called_with_boolean_true
     filter_results = BookRental.filter_by_show_all(true)
     assert_equal BookRental.all, filter_results
   end
 
-  test 'filter_by_show_all should return only current rentals when called with blank values' do
+  def test_filter_by_show_all_should_return_only_current_rentals_when_called_with_blank_values
     filter_results = BookRental.filter_by_show_all(nil)
     assert_equal BookRental.current, filter_results
 
@@ -99,3 +99,4 @@ class BookRentalTest < ActiveSupport::TestCase
     assert_equal BookRental.current, filter_results
   end
 end
+
